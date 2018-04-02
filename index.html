@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title> CS 3300 - Project 2 </title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <script src="scripts/d3/d3.min.js"></script>
+</head>
+<body>
+    <script>
+        heroNetwork = new Map();
+
+        d3.csv("Marvel_Social_Network/hero-network.csv", function(data) {
+            network = data;
+            network.forEach(function(element) {
+                if(!heroNetwork.has(element["hero1"])){
+                    heroNetwork.set(element["hero1"],[element["hero2"]]);
+                }
+                else {
+                    associatedHeros = heroNetwork.get(element["hero1"]);
+                    if(!associatedHeros.includes(element["hero2"])){
+                        associatedHeros = associatedHeros.concat([element["hero2"]]);
+                        heroNetwork.set(element["hero1"], associatedHeros);
+                    }
+
+                }
+            });
+            console.log(heroNetwork);
+        });
+    </script>
+</body>
