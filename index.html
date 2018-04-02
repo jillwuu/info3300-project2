@@ -9,20 +9,23 @@
 <body>
     <script>
         heroNetwork = new Map();
-
+        Avengers = ["IRON MAN/TONY STARK","CAPTAIN AMERICA","HULK/DR. ROBERT BRUC","BLACK WIDOW/NATASHA","HAWK","SPIDER-MAN/PETER PAR","THOR/DR. DONALD BLAK","BLACK PANTHER/T'CHAL" ]
         d3.csv("Marvel_Social_Network/hero-network.csv", function(data) {
             network = data;
             network.forEach(function(element) {
-                if(!heroNetwork.has(element["hero1"])){
-                    heroNetwork.set(element["hero1"],[element["hero2"]]);
+                hero1 = element["hero1"].trim();
+                hero2 = element["hero2"].trim();
+                if(!heroNetwork.has(hero1)){
+                    if(Avengers.includes(hero1)) {
+                        heroNetwork.set(hero1,[hero2]);
+                    }
                 }
                 else {
-                    associatedHeros = heroNetwork.get(element["hero1"]);
-                    if(!associatedHeros.includes(element["hero2"])){
-                        associatedHeros = associatedHeros.concat([element["hero2"]]);
-                        heroNetwork.set(element["hero1"], associatedHeros);
+                    associatedHeros = heroNetwork.get(hero1);
+                    if(!associatedHeros.includes(hero2)){
+                        associatedHeros = associatedHeros.concat([hero2]);
+                        heroNetwork.set(hero1, associatedHeros);
                     }
-
                 }
             });
             console.log(heroNetwork);
