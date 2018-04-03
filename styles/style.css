@@ -1,0 +1,25 @@
+html,body{
+    background-color: black;
+}
+h1{
+    color: rgb(0, 165, 255);
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    margin: 5px;
+    font-size: 60px;
+}
+
+h2{
+    color: rgb(127, 82, 214);
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    margin: 5px;
+    font-size: 50px;
+}
+
+p{
+    color: white;
+    font-family:'Arsenal', sans-serif;
+    font-size: 30px;
+    margin: 10px;
+}

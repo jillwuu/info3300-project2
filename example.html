@@ -23,7 +23,7 @@ function callback(error, data){
     .attr("cx", 250)
     .attr("cy", 250)
     .attr("r", 3)
-    .attr("fill", "black");
+    .attr("fill", "red");
     
     svg.selectAll("circle")
     .data(coordinates)
@@ -42,7 +42,7 @@ function callback(error, data){
     .attr("x2", d => d.x)
     .attr("y1", 250)
     .attr("y2", d => d.y)
-    .attr("stroke", "black");
+    .attr("stroke", "red");
 
 }
 
