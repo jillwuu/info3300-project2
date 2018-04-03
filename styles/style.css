@@ -4,7 +4,7 @@ html,body{
 h1{
     width: 1200px;
     color: white;
-    background-color: red;
+    background-color: rgb(216, 0, 0);
     display: inline-block;
     font-family: 'Anton', sans-serif;
     margin: 5px;
