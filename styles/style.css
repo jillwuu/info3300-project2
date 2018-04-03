@@ -2,11 +2,16 @@ html,body{
     background-color: black;
 }
 h1{
-    color: rgb(0, 165, 255);
+    width: 1200px;
+    color: white;
+    background-color: red;
     display: inline-block;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Anton', sans-serif;
     margin: 5px;
     font-size: 60px;
+    vertical-align: middle;
+    padding: 10px;
+    text-align: center;
 }
 
 h2{

@@ -4,12 +4,17 @@
   <meta charset="utf-8"/>
   <title> CS 3300 - Project 2 </title>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <script src="scripts/d3/d3.min.js"></script>
 </head>
     
 <body>
+    <h1>MARVEL™ Social Network</h1>
     <svg />
     <script>
+        var padding = 20;
+        var height = 800;
+        var width = 1200;
         
         /* Loading initial data:
         declares Avengers array, which contains list of all Avenger names
@@ -65,15 +70,7 @@
         The callback function creates coordinates, lineCoord, secondaryCooridnates, and secondaryLines.
         Then it calls showMap(), which actually draws the visual elements.
         */
-        function callback(heroNetwork){
-            var padding = 20;
-            var height = 800;
-            var width = 1200;
-            
-            var svg = d3.select("svg")
-                .attr("height", height).attr("width", width);
-
-            
+        function callback(heroNetwork){ 
             /* Coordinates:
             Array containing objects. The objects are defined in the following way:
             {hero: hero name, x: xcoord, y: ycoord, color: color of hero}
@@ -186,7 +183,7 @@
                 lineCoord: all lines connected to Avengers
                 secondaryLines: all lines that are not connected to Avengers
                 totalLines: all lines*/
-            showMap(svg, coordinates, lineCoord);
+            showMap(coordinates, lineCoord);
             
         }
         
@@ -195,7 +192,11 @@
         Takes the svg, coordinate array, and line array to map the visual elements.
         Can change the inputs to show Avenger connected characters or not.
         */
-        function showMap(svg, coordinates, lines){
+        function showMap(coordinates, lines){
+             
+            var svg = d3.select("svg")
+                .attr("height", height).attr("width", width);
+
             
             /* getCoordinates(d, c):
             This function returns a specific value from the coordinates array, or false if the hero is not in coordinates array.
