@@ -75,16 +75,13 @@
             });
         }
         
-        function callback(heroNetwork){ 
-            showMap(heroNetwork);
-        }
         
         
         /* showMap:
         Takes the svg, coordinate array, and line array to map the visual elements.
         Can change the inputs to show Avenger connected characters or not.
         */
-        function showMap(heroMap){
+        function callback(heroMap){
              
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
@@ -102,7 +99,7 @@
                         .selectAll("line")
                         .data(links)
                         .enter().append("line")
-                        .attr("stroke-width", "3")
+                        .attr("stroke-width", "2")
                         .attr("stroke", "#999")
                         .attr("stroke-opacity", "0.6");
 
@@ -113,7 +110,6 @@
                         .enter().append("circle")
                         .attr("r", 5)
                         .attr("fill", "white")
-                        .on("dblclick", dblclick)
                         .call(d3.drag()
                             .on("start", dragstarted)
                             .on("drag", dragged)
@@ -124,22 +120,34 @@
                 if (d.id == "IRON MAN/TONY STARK"){
                     d.fx = 50;
                     d.fy = 20;
+                    d.x = 50;
+                    d.y = 20;
                 }
                 else if (d.id == "CAPTAIN AMERICA"){
                     d.fx = width/2 + 20;
                     d.fy = 50;
+                    d.x = width/2 + 20;
+                    d.y = 50;
                 } else if (d.id == "HULK/DR. ROBERT BRUC"){
                     d.fx = width - 50;
                     d.fy = 20;
+                    d.x = width - 50;
+                    d.y = 20;
                 } else if (d.id == "BLACK WIDOW/NATASHA"){
                     d.fx = 20;
                     d.fy = height - 30;
+                    d.x = 20;
+                    d.y = height - 30;
                 } else if (d.id == "HAWK"){
                     d.fx = width/2 + 50;
                     d.fy = height - 20;
+                    d.x = width/2 + 50;
+                    d.y = height - 20;
                 } else if (d.id == "THOR/DR. DONALD BLAK"){
                     d.fx = width - 20;
                     d.fy = height - 30;
+                    d.x = width - 20;
+                    d.y = height - 30;
                 } 
             })
 
@@ -166,9 +174,7 @@
 
             function dragstarted(d) {
               if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-              d.fx = d.x;
-              d.fy = d.y;
-              d3.select(this).classed("fixed", d.fixed = true);
+
             }
 
             function dragged(d) {
@@ -177,14 +183,13 @@
             }
 
             function dragended(d) {
-              if (!d3.event.active) simulation.alphaTarget(0);
+                if (!Avengers.includes(d.id)){
+                    d.fx = null;
+                    d.fy = null;
+                }
+              simulation.alphaTarget(0).restart()
             }
             
-            function dblclick(d) {
-                console.log("double clicked");
-                d3.select(this).classed("fixed", d.fixed = false);
-                console.log(d.fixed);
-            }
         }
     
     </script>
