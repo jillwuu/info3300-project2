@@ -17,7 +17,7 @@
 
         //inspiration: https://bl.ocks.org/mbostock/4062045
 
-        
+
         var padding = 20;
         var height = 800;
         var width = 1200;
@@ -100,6 +100,12 @@
                              .force("charge", d3.forceManyBody().strength(-1500))
                              .force("center", d3.forceCenter(width/2, height/2));
 
+            var toolTip = d3.select("body")
+                            .append("div")
+                            .attr("class", "tooltip")
+                            .style("opacity", "0")
+                            .style("display", "none");
+
             var link = svg.append("g")
                         .attr("class", "links")
                         .selectAll("line")
@@ -119,7 +125,25 @@
                         .call(d3.drag()
                             .on("start", dragstarted)
                             .on("drag", dragged)
-                            .on("end", dragended));
+                            .on("end", dragended))
+                        .on("mouseover", function(d){
+                            toolTip.transition()
+                                .duration(200)
+                                .style("display", "block")
+                                .style("opacity", 0.9);
+                            toolTip.html(d.id)
+                                    .style("left", (d3.event.pageX) + "px")
+                                    .style("top", (d3.event.pageY) + "px");
+                            console.log(d.id);
+                        })
+                        .on("mouseout", function(d){
+                            toolTip.transition()
+                                .duration(500)
+                                .style("display", "none")
+                                .style("opacity", 0);
+                        })
+                        ;
+            
 
 
             nodes.forEach(function(d){
