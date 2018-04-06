@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <script src="scripts/d3/d3.min.js"></script>
+
 </head>
     
 <body>
@@ -21,170 +22,61 @@
         declares and filles in mcuCharacters, which contains a list of all characters in the Marvel Cinematic Universe excluding the Avengers.
         Then calls fillHeroNetwork with the mcuCharacters
         */
+
         var Avengers = ["IRON MAN/TONY STARK","CAPTAIN AMERICA","HULK/DR. ROBERT BRUC","BLACK WIDOW/NATASHA","HAWK","THOR/DR. DONALD BLAK"];
+
+        function remove(array, element){
+            var index = array.indexOf(element);
+            array.splice(index, 1);
+        }
+
+        //create array of all the characters we want to represent
         var mcuCharacters = [];
         d3.csv("mcuCharacters.csv", function(data){
             data.forEach(function(d){
                 mcuCharacters.push(d.heroes);
             })
-            
+            Avengers.forEach(function(d){
+                mcuCharacters.push(d);
+            })
+            remove(mcuCharacters, "POTTS, VIRGINIA PEPP");
+            remove(mcuCharacters, "DUGAN, DUM DUM | MUT");
             fillHeroNetwork(mcuCharacters);
         })
-        
-        
-        /* fillHeroNetwork:
-        Creates a map of all connections with characters we are interested in.
-        Map looks like: {hero1: [connections]}
-        key: hero1, is the name of the hero
-        value: connections, is an array containing the names of all the heros that hero1 is connected to
-        */
+
         function fillHeroNetwork(mcuCharacters){
-            var heroNetwork = new Map();
-    
+            //initialize heronetwork
+            var heroNetwork = new Object();
+            heroNetwork.nodes = [];
+            heroNetwork.links = [];
+            //add nodes to data object
+            mcuCharacters.forEach(function(element){
+                var charObj = new Object();
+                charObj.id = element;
+                heroNetwork.nodes.push(charObj);
+            })
+
             d3.csv("Marvel_Social_Network/hero-network.csv", function(data) {
-                network = data;
-                network.forEach(function(element) {
+                data.forEach(function(element){
                     hero1 = element["hero1"].trim();
                     hero2 = element["hero2"].trim();
-                    if(!heroNetwork.has(hero1)){
-                       if((mcuCharacters.includes(hero1) || Avengers.includes(hero1)) && mcuCharacters.includes(hero2)) {
-                            heroNetwork.set(hero1,[hero2]);
-                        }
-                    } 
-                    else {
-                        associatedHeros = heroNetwork.get(hero1);
-                        if(!associatedHeros.includes(hero2) && mcuCharacters.includes(hero2)){
-                            associatedHeros = associatedHeros.concat([hero2]);
-                            heroNetwork.set(hero1, associatedHeros);
+                    if((mcuCharacters.includes(hero1) || Avengers.includes(hero1)) && mcuCharacters.includes(hero2) ){
+
+                        var linkObj = {"source": hero1, "target": hero2};
+                        if (!heroNetwork.links.includes(linkObj)){
+                            heroNetwork.links.push(linkObj);
                         }
                     }
-                });
+
+
+                })
                 console.log(heroNetwork);
                 callback(heroNetwork);
-            })
+            });
         }
         
-        
-        /* callback
-        Once mcuCharacters and heroNetwork is loaded, the callback functions parses through all this data to create a useful mapping to the visual element.
-        The callback function creates coordinates, lineCoord, secondaryCooridnates, and secondaryLines.
-        Then it calls showMap(), which actually draws the visual elements.
-        */
         function callback(heroNetwork){ 
-            /* Coordinates:
-            Array containing objects. The objects are defined in the following way:
-            {hero: hero name, x: xcoord, y: ycoord, color: color of hero}
-            For each hero, if it is an Avenger, it has desingated color, if not, then it is "rgb(155, 155, 155)", which is gray.
-            Each Avenger is pre-assigned a coordinate around the edge of the svg. The other heroes are assigned random points within the SVG.
-            Coordinates should contain all heroes connected to the Avengers, as well as the Avengers. If there are any heroes not connected to the Avengers, then they should not appear in coordinates.
-            Below is the initiating coordinates containing the objects just for the Avengers.
-            */
-            var coordinates = [{hero: "IRON MAN/TONY STARK", x: padding, y: padding, color: "red"}, {hero: "CAPTAIN AMERICA", x: width/2, y: padding, color: "blue"}, {hero: "HULK/DR. ROBERT BRUC", x: width - padding, y: padding, color: "green"}, {hero: "BLACK WIDOW/NATASHA", x: padding, y: height - padding, color: "orange"}, {hero: "HAWK", x: width/2, y: height - padding, color: "purple"}, {hero: "THOR/DR. DONALD BLAK", x: width - padding, y: height - padding, color: "yellow"}];
-            
-            
-            /* LineCoord: 
-            Is 2D array. The inner array is of length 3 in the following form:
-            [hero1, hero2, color]
-            This array contains a list of all the lines that need to be drawn. Hero1 is where the line starts, Hero2 is where the line ends. The color is the color of the line.
-            For each line, if the line is connected to an Avenger, then the line color is the color of the Avenger. If the line goes from Avenger to Avenger, then the line color is white. There are no non-Avenger to non-Avenger lines in lineCoord.
-            Below is the initating lineCoord containing the values for all the Avengers.
-            */
-            var lineCoord = [["IRON MAN/TONY STARK", "CAPTAIN AMERICA", "white"], ["IRON MAN/TONY STARK", "HULK/DR. ROBERT BRUC", "white"], ["IRON MAN/TONY STARK", "BLACK WIDOW/NATASHA", "white"], ["IRON MAN/TONY STARK", "HAWK", "white"], ["IRON MAN/TONY STARK", "THOR/DR. DONALD BLAK", "white"], ["CAPTAIN AMERICA", "HULK/DR. ROBERT BRUC", "white"], ["CAPTAIN AMERICA", "BLACK WIDOW/NATASHA", "white"], ["CAPTAIN AMERICA", "HAWK", "white"], ["CAPTAIN AMERICA", "THOR/DR. DONALD BLAK", "white"], ["HULK/DR. ROBERT BRUC", "BLACK WIDOW/NATASHA", "white"], ["HULK/DR. ROBERT BRUC", "HAWK", "white"], ["HULK/DR. ROBERT BRUC", "THOR/DR. DONALD BLAK", "white"], ["BLACK WIDOW/NATASHA", "HAWK", "white"], ["BLACK WIDOW/NATASHA", "THOR/DR. DONALD BLAK", "white"], ["HAWK", "THOR/DR. DONALD BLAK", "white"]];
-            
-            
-            /* secondaryCoodrinates:
-            This is an array with objects containing mapping information for all heroes not connected to the Avengers.*/
-            var secondaryCoordinates = [];
-            
-            /* secondaryLines:
-            This is an array with size 3 arrays holding line data for all lines that are not connected to an Avenger. All the lines in this array have the color "rgb(155, 155, 155)".*/
-            var secondaryLines = [];
-
-            
-            /* getCoordinates(d, c):
-            This function returns a specific value from the coordinates array, or false if the hero is not in coordinates array.
-            Inputs:
-            d: the name of the hero (in quotes)
-            c: the value you want to get (in quotes).
-            Example: if you want the x coordinate for Iron Man, then you call getCoordinates("IRON MAN/TONY STARK", "x").
-            Returns: either hero name (which is redudant since you need to input the hero name), x coordinate, y coordinate, or hero color if the hero is within the coordinates array. 
-            If the hero cannot be found in the array, then it returns false */
-            function getCoordinates(d, c){
-                var returnCoordinate = false;
-                coordinates.forEach(function (coord){
-                    if (coord["hero"] == d) {
-                        returnCoordinate = coord[c];
-                    } 
-                })
-                return returnCoordinate;
-            }
-            
-            
-            /* getSecCoord(d, c):
-            Does same thing as getCoordinates, but searches through secondaryCoordinates array instead.*/
-            function getSecCoord(d, c){
-                var returnCoordinate = false;
-                secondaryCoordinates.forEach(function(coord){
-                    if (coord["hero"] == d){
-                        returnCoordinate = coord[c];
-                    }
-                })
-                return returnCoordinate;
-            }
-            
-            
-/*===================================================================================================================*/
-//PROBLEM: This creates a random coordinate for each of the non Avenger characters each time, so the mapping always looks different when we refresh. Does anyone know how to fix this??
-            
-            /* Looping through each of the Avengers and their connections. If their connection does not exist within coordinates array, then it pushes a new object with the hero name and random x and y coordinates (color is always gray since the hero is not an Avenger). Then it pushes the line data for the Avenger and the hero. If the hero already exists within the coordinate array, then it only pushes the line connecting the Avenger and the hero. */
-            Avengers.forEach(function (character){
-                var connections = heroNetwork.get(character);
-                connections.forEach(function(d){
-                    if (!getCoordinates(d, "hero")){
-                        coordinates.push({hero: d, x: Math.floor(Math.random()*1100) + 50, y: Math.floor(Math.random()*700)+50, color: "rgb(155, 155, 155)"});
-                        lineCoord.push([character, d, getCoordinates(character, "color")]);
-                    } else {
-                        lineCoord.push([character, d, getCoordinates(character, "color")]);
-                    }
-                })
-            
-            })
-/*===================================================================================================================*/     
-            
-            
-            /* Looping through the rest of the characters that are not Avengers. If the coordinates for the character does not exist in either coordinates or secondaryCoordinates, then it pushes the character and random coordinates to the secondaryCoordinates array. The it loops through the character's connections and pushes the line data for the character and its connections to the secondaryLine array. */
-            mcuCharacters.forEach(function (char){
-                if (!getCoordinates(char, "hero") && !getSecCoord(char, "hero")){
-                    secondaryCoordinates.push({hero: char, x: Math.floor(Math.random()*1100) + 50, y: Math.floor(Math.random()*700)+50, color: "rgb(155, 155, 155)"});
-                }
-                var connect = heroNetwork.get(char);
-                if (connect != undefined){
-                    connect.forEach(function(d){
-                        secondaryLines.push([char, d, "rgb(155, 155, 155)"]);
-                    })
-                }
-            })
-            
-            //console.log(coordinates.length); => shows number of characters total
-            
-            
-            //concatenating coordinates and secondaryCoordinates
-            var totalCoords = secondaryCoordinates.concat(coordinates);
-            //concatenating lineCoord and secondaryLines;
-            var totalLines = secondaryLines.concat(lineCoord);
-            
-            
-            /* Calling showMap:
-            2nd input value:
-                coordinates: all characters connected to Avengers, and Avengers
-                secondaryCoordinates: all characters not connected to the Avengers
-                totalCoords: all characters
-            3rd input value:
-                lineCoord: all lines connected to Avengers
-                secondaryLines: all lines that are not connected to Avengers
-                totalLines: all lines*/
-            showMap(coordinates, lineCoord);
-            
+            showMap(heroNetwork);
         }
         
         
@@ -192,85 +84,107 @@
         Takes the svg, coordinate array, and line array to map the visual elements.
         Can change the inputs to show Avenger connected characters or not.
         */
-        function showMap(coordinates, lines){
+        function showMap(heroMap){
              
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
 
-            
-            /* getCoordinates(d, c):
-            This function returns a specific value from the coordinates array, or false if the hero is not in coordinates array.
-            Inputs:
-            d: the name of the hero (in quotes)
-            c: the value you want to get (in quotes).
-            Example: if you want the x coordinate for Iron Man, then you call getCoordinates("IRON MAN/TONY STARK", "x").
-            Returns: either hero name (which is redudant since you need to input the hero name), x coordinate, y coordinate, or hero color if the hero is within the coordinates array. 
-            If the hero cannot be found in the array, then it returns false */
-            function getCoordinates(d, c){
-                var returnCoordinate = null;
-                coordinates.forEach(function (coord){
-                    if (coord["hero"] == d) {
-                        returnCoordinate = coord[c];
-                    } 
-                })
-                return returnCoordinate;
+            var nodes = heroMap.nodes;
+            var links = heroMap.links;
+
+            var simulation = d3.forceSimulation()
+                             .force("link", d3.forceLink().id(function(d) { return d.id; }))
+                             .force("charge", d3.forceManyBody())
+                             .force("center", d3.forceCenter(width/2, height/2));
+
+            var link = svg.append("g")
+                        .attr("class", "links")
+                        .selectAll("line")
+                        .data(links)
+                        .enter().append("line")
+                        .attr("stroke-width", "3")
+                        .attr("stroke", "#999")
+                        .attr("stroke-opacity", "0.6");
+
+            var node = svg.append("g")
+                        .attr("class", "nodes")
+                        .selectAll("circle")
+                        .data(nodes)
+                        .enter().append("circle")
+                        .attr("r", 5)
+                        .attr("fill", "white")
+                        .on("dblclick", dblclick)
+                        .call(d3.drag()
+                            .on("start", dragstarted)
+                            .on("drag", dragged)
+                            .on("end", dragended));
+
+
+            nodes.forEach(function(d){
+                if (d.id == "IRON MAN/TONY STARK"){
+                    d.fx = 50;
+                    d.fy = 20;
+                }
+                else if (d.id == "CAPTAIN AMERICA"){
+                    d.fx = width/2 + 20;
+                    d.fy = 50;
+                } else if (d.id == "HULK/DR. ROBERT BRUC"){
+                    d.fx = width - 50;
+                    d.fy = 20;
+                } else if (d.id == "BLACK WIDOW/NATASHA"){
+                    d.fx = 20;
+                    d.fy = height - 30;
+                } else if (d.id == "HAWK"){
+                    d.fx = width/2 + 50;
+                    d.fy = height - 20;
+                } else if (d.id == "THOR/DR. DONALD BLAK"){
+                    d.fx = width - 20;
+                    d.fy = height - 30;
+                } 
+            })
+
+            node.append("title")
+                .text(function(d){ return d.id; });
+
+            simulation.nodes(nodes)
+                        .on("tick", ticked);
+
+            simulation.force("link")
+                .links(links);
+
+            function ticked() {
+                link
+                    .attr("x1", function(d) { return d.source.x; })
+                    .attr("y1", function(d) { return d.source.y; })
+                    .attr("x2", function(d) { return d.target.x; })
+                    .attr("y2", function(d) { return d.target.y; });
+
+                node
+                    .attr("cx", function(d) { return d.x; })
+                    .attr("cy", function(d) { return d.y; });
+            }
+
+            function dragstarted(d) {
+              if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+              d3.select(this).classed("fixed", d.fixed = true);
+            }
+
+            function dragged(d) {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+              if (!d3.event.active) simulation.alphaTarget(0);
             }
             
-            
-            /* Appends all the lines to the SVG. 
-            Use the line array to get which heros to connect the line to, then uses getCoordinates to get the coordinate points that the lines should go to. d[1] is the first hero, d[2] is the second hero. d[3] is the color of the line. Also uses the color of the line to determine opacity. 
-            If the color is "rgb(155, 155, 155)", then the opacity is .1, else, .5 (this just makes the lines connected to the Avengers more prominent). */
-            svg.selectAll("line")
-                .data(lines)
-                .enter()
-                .append("line")
-                .attr("x1", function (d){ return getCoordinates(d[0], "x")})
-                .attr("y1", function (d){ return getCoordinates(d[0], "y")})
-                .attr("x2", function (d){ return getCoordinates(d[1], "x")})
-                .attr("y2", function (d){ return getCoordinates(d[1], "y")})
-                .attr("stroke", d => d[2])
-                .attr("stroke-width", 3)
-                .attr("opacity", function (d){
-                    if(d[2] == "rgb(155, 155, 155)"){
-                        return .1;
-                    } else {
-                        return .5;
-                    }
-                });
-            
-        
-            /* Appends all the circles to the SVG. It uses the coordinates array to determine where the circles should go, and it uses the colors to determine what color the circle should be. I appended the circles below the lines so the lines don't overlap any of the circles.*/
-            svg.selectAll("circle")
-                .data(coordinates)
-                .enter()
-                .append("circle")
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y)
-                .attr("r", 10)
-                .attr("fill", d => d.color)
-                .attr("stroke", "black")
-                .attr("stroke-width", 3);
-            
-            
-/*========================================================================================================================*/
-//PROBLEM: I got rid of this because it looked bad, and I wasn't sure how to fit the text inside the circle....'
-            
-            
-            /* Appends texts on all of the circles with the corresponding hero name.
-            The fill of the text is the hero color, and the outline of the text is white.*/
-//            svg.selectAll("text")
-//                .data(coordinates)
-//                .enter()
-//                .append("text")
-//                .attr("x", d => d.x)
-//                .attr("y", d => d.y)
-//                .attr("text-anchor", "middle")
-//                .text(d => d.hero)
-//                .attr("fill", d => d.color)
-//                .attr("stroke", "white")
-//                .attr("font-size", 7);
-/*======================================================================================================================*/
-            
+            function dblclick(d) {
+                console.log("double clicked");
+                d3.select(this).classed("fixed", d.fixed = false);
+                console.log(d.fixed);
+            }
         }
     
     </script>
