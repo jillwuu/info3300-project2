@@ -38,17 +38,19 @@
 
         //create array of all the characters we want to represent
         var mcuCharacters = [];
+        var mcuCharNoAveng = [];
         d3.csv("mcuCharacters.csv", function(data){
             data.forEach(function(d){
                 mcuCharacters.push(d.heroes);
+                mcuCharNoAveng.push(d.heroes);
             })
             Avengers.forEach(function(d){
                 mcuCharacters.push(d);
             })
-            fillHeroNetwork(mcuCharacters);
+            fillHeroNetwork(mcuCharacters, mcuCharNoAveng);
         })
 
-        function fillHeroNetwork(mcuCharacters){
+        function fillHeroNetwork(mcuCharacters, mcuCharNoAveng){
             //initialize heronetwork
             var heroNetwork = new Object();
             heroNetwork.nodes = [];
@@ -60,13 +62,33 @@
                 heroNetwork.nodes.push(charObj);
             })
 
-            d3.csv("/Marvel_Social_Network/hero-network.csv", function(data) {
+            d3.csv("Marvel_Social_Network/hero-network.csv", function(error, data) {
+                if (error) console.log(error);
                 data.forEach(function(element){
                     hero1 = element["hero1"].trim();
                     hero2 = element["hero2"].trim();
-                    if((mcuCharacters.includes(hero1) || Avengers.includes(hero1)) && mcuCharacters.includes(hero2) ){
+                    if(mcuCharacters.includes(hero1) && mcuCharacters.includes(hero2) ){
+                        var color;
+                        if (Avengers.includes(hero1) && Avengers.includes(hero2)){
+                            color = "#000000";
+                        }
+                        else if (hero1 == "IRON MAN/TONY STARK" || hero2 == "IRON MAN/TONY STARK"){
+                            color = "#b20000";
+                        }else if (hero1 == "CAPTAIN AMERICA" || hero2 == "CAPTAIN AMERICA"){
+                            color = "#3232ff";
+                        } else if (hero1 == "HULK/DR. ROBERT BRUC" || hero2 == "HULK/DR. ROBERT BRUC"){
+                            color = "#4ca64c";
+                        } else if (hero1 == "BLACK WIDOW/NATASHA" || hero2 == "BLACK WIDOW/NATASHA"){
+                            color = "#ffb732";
+                        } else if (hero1 == "HAWK" || hero2 == "HAWK"){
+                            color = "#a64ca6";
+                        } else if (hero1 == "THOR/DR. DONALD BLAK" || hero2 == "THOR/DR. DONALD BLAK"){
+                            color = "#ffff4c";
+                        }else {
+                            color = "#808080";
+                        }
 
-                        var linkObj = {"source": hero1, "target": hero2};
+                        var linkObj = {"source": hero1, "target": hero2, "color": color};
                         if (!heroNetwork.links.includes(linkObj)){
                             heroNetwork.links.push(linkObj);
                         }
@@ -110,7 +132,9 @@
                         .data(links)
                         .enter().append("line")
                         .attr("stroke-width", "2")
-                        .attr("stroke", "#999")
+                        .attr("stroke", function(d) {
+                            return d.color;
+                        })
                         .attr("stroke-opacity", "0.6");
 
             var node = svg.append("g")
