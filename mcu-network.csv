@@ -1,52 +1,568 @@
 ﻿hero1,hero2
-Tony Stark/Iron Man,Happy Hogan
-Tony Stark/Iron Man,Obadiah Stane/Iron Monger
-Tony Stark/Iron Man,Jim Rhodes
-Tony Stark/Iron Man,Virginia 'Pepper' Potts
-Tony Stark/Iron Man,Nick Fury
-Tony Stark/Iron Man,Agent Phil Coulson
-Tony Stark/Iron Man,Christine Everhart
+Agent Phil Coulson,Christine Everhart
+Agent Phil Coulson,Black Widow
+Agent Phil Coulson,Black Widow
+Agent Phil Coulson,Bruce Banner/Hulk
+Agent Phil Coulson,Happy Hogan
+Agent Phil Coulson,Hawkeye
+Agent Phil Coulson,Jim Rhodes
+Agent Phil Coulson,Loki
+Agent Phil Coulson,Nick Fury
+Agent Phil Coulson,Nick Fury
+Agent Phil Coulson,Obadiah Stane/Iron Monger
+Agent Phil Coulson,Professor Erik Selvig
+Agent Phil Coulson,Steve Rogers/Captain America
+Agent Phil Coulson,Thor
+Agent Phil Coulson,Tony Stark/Iron Man
+Agent Phil Coulson,Tony Stark/Iron Man
+Agent Phil Coulson,Virginia 'Pepper' Potts
+Agent Phil Coulson,Whiplash
+Aldrich Killian,The Mandarin
+Aldrich Killian,Happy Hogan
+Aldrich Killian,Pepper Potts
+Aldrich Killian,Jim Rhodes
+Aldrich Killian,Tony Stark/Iron Man
+Aldrich Killian,Savin
+Aldrich Killian,Maya Hansen
+Aldrich Killian,Maya Hansen
+Aldrich Killian,Savin
+Aldrich Killian,The Mandarin
+Alexander Pierce,Sam Wilson/Falcon
+Alexander Pierce,Black Widow
+Alexander Pierce,Bucky Barnes/Winter Soldier
+Alexander Pierce,Sam Wilson/Falcon
+Alexander Pierce,Brock Rumlow
+Alexander Pierce,Jasper Sitwell
+Alexander Pierce,Sharon Carter
+Alexander Pierce,Nick Fury
+Alexander Pierce,Steve Rogers/Captain America
+Betty Ross,Bruce Banner/Hulk
+Betty Ross,Emil Blonksy
+Betty Ross,General Thaddeus 'Thunderbolt' Ross
+Black Panther,Tony Stark/Iron Man
+Black Panther,Black Widow
+Black Panther,Bucky Barnes/Winter Soldier
+Black Panther,Sam Wilson/Falcon
+Black Panther,Jim Rhodes
+Black Panther,Hawkeye
+Black Panther,Vision
+Black Panther,Scarlet Witch
+Black Panther,Scott Lang/Ant Man
+Black Panther,Peter Parker/Spider-Man
+Black Panther,Steve Rogers/Captain America
+Black Widow,Thor
+Black Widow,Tony Stark/Iron Man
+Black Widow,Bruce Banner/Hulk
+Black Widow,Hawkeye
+Black Widow,Loki
+Black Widow,Professor Erik Selvig
+Black Widow,Agent Phil Coulson
+Black Widow,Bucky Barnes/Winter Soldier
+Black Widow,Sam Wilson/Falcon
+Black Widow,Brock Rumlow
+Black Widow,Jasper Sitwell
+Black Widow,Sharon Carter
+Black Widow,Nick Fury
+Black Widow,Bucky Barnes/Winter Soldier
+Black Widow,Sam Wilson/Falcon
+Black Widow,Jim Rhodes
+Black Widow,Hawkeye
+Black Widow,Vision
+Black Widow,Scarlet Witch
+Black Widow,Scott Lang/Ant Man
+Black Widow,Peter Parker/Spider-Man
+Black Widow,Agent Phil Coulson
+Black Widow,Alexander Pierce
+Black Widow,Black Panther
+Black Widow,Happy Hogan
+Black Widow,James Rhodes
+Black Widow,Justin Hammer
+Black Widow,Nick Fury
+Black Widow,Nick Fury
+Black Widow,Quicksilver
+Black Widow,Sam Wilson/Falcon
+Black Widow,Scarlet Witch
+Black Widow,Steve Rogers/Captain America
+Black Widow,Steve Rogers/Captain America
+Black Widow,Steve Rogers/Captain America
+Black Widow,Tony Stark/Iron Man
+Black Widow,Ultron
+Black Widow,Virginia 'Pepper' Potts
+Black Widow,Whiplash
+Black Widow,Whiplash
+Brock Rumlow,Jasper Sitwell
+Brock Rumlow,Sharon Carter
+Brock Rumlow,Nick Fury
+Brock Rumlow,Alexander Pierce
+Brock Rumlow,Black Widow
+Brock Rumlow,Bucky Barnes/Winter Soldier
+Brock Rumlow,Sam Wilson/Falcon
+Brock Rumlow,Sam Wilson/Falcon
+Brock Rumlow,Steve Rogers/Captain America
+Bruce Banner/Hulk,General Thaddeus 'Thunderbolt' Ross
+Bruce Banner/Hulk,Emil Blonksy
+Bruce Banner/Hulk,Betty Ross
+Bruce Banner/Hulk,Hawkeye
+Bruce Banner/Hulk,Loki
+Bruce Banner/Hulk,Professor Erik Selvig
+Bruce Banner/Hulk,Agent Phil Coulson
+Bruce Banner/Hulk,Black Widow
+Bruce Banner/Hulk,Nick Fury
+Bruce Banner/Hulk,Quicksilver
+Bruce Banner/Hulk,Scarlet Witch
+Bruce Banner/Hulk,Steve Rogers/Captain America
+Bruce Banner/Hulk,Thor
+Bruce Banner/Hulk,Tony Stark/Iron Man
+Bruce Banner/Hulk,Ultron
+Bucky Barnes/Winter Soldier,Peggy Carter
+Bucky Barnes/Winter Soldier,The Red Skull
+Bucky Barnes/Winter Soldier,Dr. Abraham Erskine
+Bucky Barnes/Winter Soldier,Col. Chester Phillips
+Bucky Barnes/Winter Soldier,Howard Stark
+Bucky Barnes/Winter Soldier,Steve Rogers/Captain America
+Bucky Barnes/Winter Soldier,Sam Wilson/Falcon
+Bucky Barnes/Winter Soldier,Brock Rumlow
+Bucky Barnes/Winter Soldier,Jasper Sitwell
+Bucky Barnes/Winter Soldier,Sharon Carter
+Bucky Barnes/Winter Soldier,Nick Fury
+Bucky Barnes/Winter Soldier,Sam Wilson/Falcon
+Bucky Barnes/Winter Soldier,Jim Rhodes
+Bucky Barnes/Winter Soldier,Hawkeye
+Bucky Barnes/Winter Soldier,Vision
+Bucky Barnes/Winter Soldier,Scarlet Witch
+Bucky Barnes/Winter Soldier,Scott Lang/Ant Man
+Bucky Barnes/Winter Soldier,Peter Parker/Spider-Man
+Bucky Barnes/Winter Soldier,Alexander Pierce
+Bucky Barnes/Winter Soldier,Black Panther
+Bucky Barnes/Winter Soldier,Black Widow
+Bucky Barnes/Winter Soldier,Black Widow
+Bucky Barnes/Winter Soldier,Sam Wilson/Falcon
+Bucky Barnes/Winter Soldier,Steve Rogers/Captain America
+Bucky Barnes/Winter Soldier,Steve Rogers/Captain America
+Bucky Barnes/Winter Soldier,Tony Stark/Iron Man
+Christine Everhart,Agent Phil Coulson
+Christine Everhart,Happy Hogan
+Christine Everhart,Jim Rhodes
+Christine Everhart,Nick Fury
+Christine Everhart,Obadiah Stane/Iron Monger
+Christine Everhart,Tony Stark/Iron Man
+Christine Everhart,Virginia 'Pepper' Potts
+Col. Chester Phillips,Howard Stark
+Col. Chester Phillips,Bucky
+Col. Chester Phillips,Dr. Abraham Erskine
+Col. Chester Phillips,Peggy Carter
+Col. Chester Phillips,Steve Rogers/Captain America
+Col. Chester Phillips,The Red Skull
+Darcy,Heimdall
+Darcy,Hogun
+Darcy,Odin
+Darcy,Loki
+Darcy,Jane Foster
+Darcy,Fandral
+Darcy,Frigga
+Darcy,Sif
+Darcy,Thor
+Darren Cross/Yellowjacket,Dr. Hank Pym
+Darren Cross/Yellowjacket,Hope van Dyne
+Darren Cross/Yellowjacket,Scott Lang/Ant Man
+Dr. Abraham Erskine,Col. Chester Phillips
+Dr. Abraham Erskine,Howard Stark
+Dr. Abraham Erskine,Bucky
+Dr. Abraham Erskine,Peggy Carter
+Dr. Abraham Erskine,Steve Rogers/Captain America
+Dr. Abraham Erskine,The Red Skull
+Dr. Hank Pym,Hope van Dyne
+Dr. Hank Pym,Darren Cross/Yellowjacket
+Dr. Hank Pym,Scott Lang/Ant Man
+Emil Blonksy,Betty Ross
+Emil Blonksy,Bruce Banner/Hulk
+Emil Blonksy,General Thaddeus 'Thunderbolt' Ross
+Fandral,Sif
+Fandral,Frigga
+Fandral,Darcy
+Fandral,Heimdall
+Fandral,Hogun
+Fandral,Odin
+Fandral,Loki
+Fandral,Jane Foster
+Fandral,Thor
+Frigga,Darcy
+Frigga,Heimdall
+Frigga,Hogun
+Frigga,Odin
+Frigga,Loki
+Frigga,Jane Foster
+Frigga,Fandral
+Frigga,Sif
+Frigga,Thor
+General Thaddeus 'Thunderbolt' Ross,Emil Blonksy
+General Thaddeus 'Thunderbolt' Ross,Betty Ross
+General Thaddeus 'Thunderbolt' Ross,Bruce Banner/Hulk
 Happy Hogan,Obadiah Stane/Iron Monger
 Happy Hogan,Jim Rhodes
 Happy Hogan,Virginia 'Pepper' Potts
 Happy Hogan,Nick Fury
 Happy Hogan,Agent Phil Coulson
 Happy Hogan,Christine Everhart
+Happy Hogan,Black Widow
+Happy Hogan,Aldrich Killian
+Happy Hogan,Maya Hansen
+Happy Hogan,Savin
+Happy Hogan,The Mandarin
+Happy Hogan,Tony Stark/Iron Man
+Happy Hogan,Whiplash
+Hawkeye,Loki
+Hawkeye,Professor Erik Selvig
+Hawkeye,Agent Phil Coulson
+Hawkeye,Vision
+Hawkeye,Scarlet Witch
+Hawkeye,Scott Lang/Ant Man
+Hawkeye,Peter Parker/Spider-Man
+Hawkeye,Black Panther
+Hawkeye,Black Widow
+Hawkeye,Black Widow
+Hawkeye,Bruce Banner/Hulk
+Hawkeye,Bucky Barnes/Winter Soldier
+Hawkeye,Jim Rhodes
+Hawkeye,Nick Fury
+Hawkeye,Quicksilver
+Hawkeye,Sam Wilson/Falcon
+Hawkeye,Scarlet Witch
+Hawkeye,Steve Rogers/Captain America
+Hawkeye,Steve Rogers/Captain America
+Hawkeye,Thor
+Hawkeye,Tony Stark/Iron Man
+Hawkeye,Tony Stark/Iron Man
+Hawkeye,Ultron
+Heimdall,Hogun
+Heimdall,Odin
+Heimdall,Loki
+Heimdall,Jane Foster
+Heimdall,Darcy
+Heimdall,Fandral
+Heimdall,Frigga
+Heimdall,Sif
+Heimdall,Thor
+Hogun,Odin
+Hogun,Loki
+Hogun,Jane Foster
+Hogun,Darcy
+Hogun,Fandral
+Hogun,Frigga
+Hogun,Heimdall
+Hogun,Sif
+Hogun,Thor
+Hope van Dyne,Darren Cross/Yellowjacket
+Hope van Dyne,Dr. Hank Pym
+Hope van Dyne,Scott Lang/Ant Man
+Howard Stark,Bucky
+Howard Stark,Col. Chester Phillips
+Howard Stark,Dr. Abraham Erskine
+Howard Stark,Peggy Carter
+Howard Stark,Steve Rogers/Captain America
+Howard Stark,The Red Skull
+Howard Stark,Tony Stark/Iron Man
+Jim Rhodes,Black Widow
+Jim Rhodes,Whiplash
+Jane Foster,Darcy
+Jane Foster,Fandral
+Jane Foster,Frigga
+Jane Foster,Heimdall
+Jane Foster,Hogun
+Jane Foster,Loki
+Jane Foster,Odin
+Jane Foster,Sif
+Jane Foster,Thor
+Jasper Sitwell,Sharon Carter
+Jasper Sitwell,Nick Fury
+Jasper Sitwell,Alexander Pierce
+Jasper Sitwell,Black Widow
+Jasper Sitwell,Brock Rumlow
+Jasper Sitwell,Bucky Barnes/Winter Soldier
+Jasper Sitwell,Sam Wilson/Falcon
+Jasper Sitwell,Sam Wilson/Falcon
+Jasper Sitwell,Steve Rogers/Captain America
+Jim Rhodes,Virginia 'Pepper' Potts
+Jim Rhodes,Nick Fury
+Jim Rhodes,Agent Phil Coulson
+Jim Rhodes,Christine Everhart
+Jim Rhodes,Hawkeye
+Jim Rhodes,Vision
+Jim Rhodes,Scarlet Witch
+Jim Rhodes,Scott Lang/Ant Man
+Jim Rhodes,Peter Parker/Spider-Man
+Jim Rhodes,Aldrich Killian
+Jim Rhodes,Black Panther
+Jim Rhodes,Black Widow
+Jim Rhodes,Bucky Barnes/Winter Soldier
+Jim Rhodes,Happy Hogan
+Jim Rhodes,Maya Hansen
+Jim Rhodes,Obadiah Stane/Iron Monger
+Jim Rhodes,Sam Wilson/Falcon
+Jim Rhodes,Savin
+Jim Rhodes,Steve Rogers/Captain America
+Jim Rhodes,The Mandarin
+Jim Rhodes,Tony Stark/Iron Man
+Jim Rhodes,Tony Stark/Iron Man
+Justin Hammer,Black Widow
+Justin Hammer,Whiplash
+Loki,Jane Foster
+Loki,Professor Erik Selvig
+Loki,Agent Phil Coulson
+Loki,Black Widow
+Loki,Bruce Banner/Hulk
+Loki,Darcy
+Loki,Fandral
+Loki,Frigga
+Loki,Hawkeye
+Loki,Heimdall
+Loki,Hogun
+Loki,Nick Fury
+Loki,Odin
+Loki,Sif
+Loki,Steve Rogers/Captain America
+Loki,Thor
+Loki,Thor
+Loki,Tony Stark/Iron Man
+Maya Hansen,The Mandarin
+Maya Hansen,Happy Hogan
+Maya Hansen,Pepper Potts
+Maya Hansen,Jim Rhodes
+Maya Hansen,Tony Stark/Iron Man
+Maya Hansen,Aldrich Killian
+Maya Hansen,Savin
+Maya Hansen,Aldrich Killian
+Maya Hansen,Savin
+Maya Hansen,The Mandarin
+Nick Fury,Agent Phil Coulson
+Nick Fury,Christine Everhart
+Nick Fury,Black Widow
+Nick Fury,Black Widow
+Nick Fury,Thor
+Nick Fury,Tony Stark/Iron Man
+Nick Fury,Bruce Banner/Hulk
+Nick Fury,Hawkeye
+Nick Fury,Loki
+Nick Fury,Professor Erik Selvig
+Nick Fury,Agent Phil Coulson
+Nick Fury,Alexander Pierce
+Nick Fury,Black Widow
+Nick Fury,Brock Rumlow
+Nick Fury,Bucky Barnes/Winter Soldier
+Nick Fury,Happy Hogan
+Nick Fury,Jasper Sitwell
+Nick Fury,Jim Rhodes
+Nick Fury,Obadiah Stane/Iron Monger
+Nick Fury,Sam Wilson/Falcon
+Nick Fury,Sam Wilson/Falcon
+Nick Fury,Steve Rogers/Captain America
+Nick Fury,Steve Rogers/Captain America
+Nick Fury,Tony Stark/Iron Man
+Nick Fury,Virginia 'Pepper' Potts
+Nick Fury,Whiplash
 Obadiah Stane/Iron Monger,Jim Rhodes
 Obadiah Stane/Iron Monger,Virginia 'Pepper' Potts
 Obadiah Stane/Iron Monger,Nick Fury
 Obadiah Stane/Iron Monger,Agent Phil Coulson
 Obadiah Stane/Iron Monger,Christine Everhart
-Jim Rhodes,Virginia 'Pepper' Potts
-Jim Rhodes,Nick Fury
-Jim Rhodes,Agent Phil Coulson
-Jim Rhodes,Christine Everhart
-Virginia 'Pepper' Potts,Nick Fury
-Virginia 'Pepper' Potts,Agent Phil Coulson
-Virginia 'Pepper' Potts,Christine Everhart
-Nick Fury,Agent Phil Coulson
-Nick Fury,Christine Everhart
-Agent Phil Coulson,Christine Everhart
-Bruce Banner/Hulk,General Thaddeus 'Thunderbolt' Ross
-Bruce Banner/Hulk,Emil Blonksy
-Bruce Banner/Hulk,Betty Ross
-General Thaddeus 'Thunderbolt' Ross,Emil Blonksy
-General Thaddeus 'Thunderbolt' Ross,Betty Ross
-Emil Blonksy,Betty Ross
-Happy Hogan,Black Widow
-Virginia 'Pepper' Potts,Black Widow
-James Rhodes,Black Widow
-Whiplash,Black Widow
-Justin Hammer,Black Widow
-Nick Fury,Black Widow
-Agent Phil Coulson,Black Widow
-Whiplash,Happy Hogan
-Whiplash,Virginia 'Pepper' Potts
-Whiplash,James Rhodes
-Whiplash,Black Widow
-Whiplash,Justin Hammer
-Whiplash,Nick Fury
-Whiplash,Agent Phil Coulson
+Obadiah Stane/Iron Monger,Happy Hogan
+Obadiah Stane/Iron Monger,Tony Stark/Iron Man
+Odin,Loki
+Odin,Jane Foster
+Odin,Darcy
+Odin,Fandral
+Odin,Frigga
+Odin,Heimdall
+Odin,Hogun
+Odin,Sif
+Odin,Thor
+Peggy Carter,The Red Skull
+Peggy Carter,Dr. Abraham Erskine
+Peggy Carter,Col. Chester Phillips
+Peggy Carter,Howard Stark
+Peggy Carter,Bucky
+Peggy Carter,Steve Rogers/Captain America
+Pepper Potts,Aldrich Killian
+Pepper Potts,Maya Hansen
+Pepper Potts,Savin
+Pepper Potts,The Mandarin
+Peter Parker/Spider-Man,Black Panther
+Peter Parker/Spider-Man,Black Widow
+Peter Parker/Spider-Man,Bucky Barnes/Winter Soldier
+Peter Parker/Spider-Man,Hawkeye
+Peter Parker/Spider-Man,Jim Rhodes
+Peter Parker/Spider-Man,Sam Wilson/Falcon
+Peter Parker/Spider-Man,Scarlet Witch
+Peter Parker/Spider-Man,Scott Lang/Ant Man
+Peter Parker/Spider-Man,Steve Rogers/Captain America
+Peter Parker/Spider-Man,Tony Stark/Iron Man
+Peter Parker/Spider-Man,Vision
+Professor Erik Selvig,Agent Phil Coulson
+Professor Erik Selvig,Black Widow
+Professor Erik Selvig,Bruce Banner/Hulk
+Professor Erik Selvig,Hawkeye
+Professor Erik Selvig,Loki
+Professor Erik Selvig,Nick Fury
+Professor Erik Selvig,Steve Rogers/Captain America
+Professor Erik Selvig,Thor
+Professor Erik Selvig,Tony Stark/Iron Man
+Quicksilver,Tony Stark/Iron Man
+Quicksilver,Steve Rogers/Captain America
+Quicksilver,Bruce Banner/Hulk
+Quicksilver,Thor
+Quicksilver,Black Widow
+Quicksilver,Vision
+Quicksilver,Hawkeye
+Quicksilver,Scarlet Witch
+Quicksilver,Ultron
+Quicksilver,Scarlet Witch
+Quicksilver,Ultron
+Sam Wilson/Falcon,Black Widow
+Sam Wilson/Falcon,Bucky Barnes/Winter Soldier
+Sam Wilson/Falcon,Sam Wilson/Falcon
+Sam Wilson/Falcon,Brock Rumlow
+Sam Wilson/Falcon,Jasper Sitwell
+Sam Wilson/Falcon,Sharon Carter
+Sam Wilson/Falcon,Nick Fury
+Sam Wilson/Falcon,Brock Rumlow
+Sam Wilson/Falcon,Jasper Sitwell
+Sam Wilson/Falcon,Sharon Carter
+Sam Wilson/Falcon,Nick Fury
+Sam Wilson/Falcon,Jim Rhodes
+Sam Wilson/Falcon,Hawkeye
+Sam Wilson/Falcon,Vision
+Sam Wilson/Falcon,Scarlet Witch
+Sam Wilson/Falcon,Scott Lang/Ant Man
+Sam Wilson/Falcon,Peter Parker/Spider-Man
+Sam Wilson/Falcon,Alexander Pierce
+Sam Wilson/Falcon,Alexander Pierce
+Sam Wilson/Falcon,Black Panther
+Sam Wilson/Falcon,Black Widow
+Sam Wilson/Falcon,Black Widow
+Sam Wilson/Falcon,Bucky Barnes/Winter Soldier
+Sam Wilson/Falcon,Bucky Barnes/Winter Soldier
+Sam Wilson/Falcon,Sam Wilson/Falcon
+Sam Wilson/Falcon,Steve Rogers/Captain America
+Sam Wilson/Falcon,Steve Rogers/Captain America
+Sam Wilson/Falcon,Steve Rogers/Captain America
+Sam Wilson/Falcon,Tony Stark/Iron Man
+Savin,The Mandarin
+Savin,Happy Hogan
+Savin,Pepper Potts
+Savin,Jim Rhodes
+Savin,Tony Stark/Iron Man
+Savin,Aldrich Killian
+Savin,Maya Hansen
+Savin,Aldrich Killian
+Savin,Maya Hansen
+Savin,The Mandarin
+Scarlet Witch,Tony Stark/Iron Man
+Scarlet Witch,Steve Rogers/Captain America
+Scarlet Witch,Bruce Banner/Hulk
+Scarlet Witch,Thor
+Scarlet Witch,Black Widow
+Scarlet Witch,Vision
+Scarlet Witch,Hawkeye
+Scarlet Witch,Quicksilver
+Scarlet Witch,Ultron
+Scarlet Witch,Scott Lang/Ant Man
+Scarlet Witch,Peter Parker/Spider-Man
+Scarlet Witch,Black Panther
+Scarlet Witch,Black Widow
+Scarlet Witch,Bucky Barnes/Winter Soldier
+Scarlet Witch,Hawkeye
+Scarlet Witch,Jim Rhodes
+Scarlet Witch,Quicksilver
+Scarlet Witch,Sam Wilson/Falcon
+Scarlet Witch,Steve Rogers/Captain America
+Scarlet Witch,Tony Stark/Iron Man
+Scarlet Witch,Ultron
+Scarlet Witch,Vision
+Scott Lang/Ant Man,Dr. Hank Pym
+Scott Lang/Ant Man,Hope van Dyne
+Scott Lang/Ant Man,Darren Cross/Yellowjacket
+Scott Lang/Ant Man,Peter Parker/Spider-Man
+Scott Lang/Ant Man,Black Panther
+Scott Lang/Ant Man,Black Widow
+Scott Lang/Ant Man,Bucky Barnes/Winter Soldier
+Scott Lang/Ant Man,Hawkeye
+Scott Lang/Ant Man,Jim Rhodes
+Scott Lang/Ant Man,Sam Wilson/Falcon
+Scott Lang/Ant Man,Scarlet Witch
+Scott Lang/Ant Man,Steve Rogers/Captain America
+Scott Lang/Ant Man,Tony Stark/Iron Man
+Scott Lang/Ant Man,Vision
+Sharon Carter,Alexander Pierce
+Sharon Carter,Black Widow
+Sharon Carter,Brock Rumlow
+Sharon Carter,Bucky Barnes/Winter Soldier
+Sharon Carter,Jasper Sitwell
+Sharon Carter,Sam Wilson/Falcon
+Sharon Carter,Sam Wilson/Falcon
+Sharon Carter,Steve Rogers/Captain America
+Sif,Frigga
+Sif,Darcy
+Sif,Heimdall
+Sif,Hogun
+Sif,Odin
+Sif,Loki
+Sif,Jane Foster
+Sif,Fandral
+Sif,Thor
+Steve Rogers/Captain America,Nick Fury
+Steve Rogers/Captain America,Bucky
+Steve Rogers/Captain America,Peggy Carter
+Steve Rogers/Captain America,The Red Skull
+Steve Rogers/Captain America,Dr. Abraham Erskine
+Steve Rogers/Captain America,Col. Chester Phillips
+Steve Rogers/Captain America,Howard Stark
+Steve Rogers/Captain America,Black Widow
+Steve Rogers/Captain America,Thor
+Steve Rogers/Captain America,Tony Stark/Iron Man
+Steve Rogers/Captain America,Bruce Banner/Hulk
+Steve Rogers/Captain America,Hawkeye
+Steve Rogers/Captain America,Loki
+Steve Rogers/Captain America,Professor Erik Selvig
+Steve Rogers/Captain America,Agent Phil Coulson
+Steve Rogers/Captain America,Alexander Pierce
+Steve Rogers/Captain America,Sam Wilson/Falcon
+Steve Rogers/Captain America,Black Widow
+Steve Rogers/Captain America,Bucky Barnes/Winter Soldier
+Steve Rogers/Captain America,Sam Wilson/Falcon
+Steve Rogers/Captain America,Brock Rumlow
+Steve Rogers/Captain America,Jasper Sitwell
+Steve Rogers/Captain America,Sharon Carter
+Steve Rogers/Captain America,Nick Fury
+Steve Rogers/Captain America,Black Panther
+Steve Rogers/Captain America,Tony Stark/Iron Man
+Steve Rogers/Captain America,Black Widow
+Steve Rogers/Captain America,Bucky Barnes/Winter Soldier
+Steve Rogers/Captain America,Sam Wilson/Falcon
+Steve Rogers/Captain America,Jim Rhodes
+Steve Rogers/Captain America,Hawkeye
+Steve Rogers/Captain America,Vision
+Steve Rogers/Captain America,Scarlet Witch
+Steve Rogers/Captain America,Scott Lang/Ant Man
+Steve Rogers/Captain America,Peter Parker/Spider-Man
+Steve Rogers/Captain America,Quicksilver
+Steve Rogers/Captain America,Scarlet Witch
+Steve Rogers/Captain America,Ultron
+The Mandarin,Happy Hogan
+The Mandarin,Pepper Potts
+The Mandarin,Jim Rhodes
+The Mandarin,Tony Stark/Iron Man
+The Mandarin,Aldrich Killian
+The Mandarin,Savin
+The Mandarin,Maya Hansen
+The Mandarin,Aldrich Killian
+The Mandarin,Maya Hansen
+The Mandarin,Savin
+The Red Skull,Dr. Abraham Erskine
+The Red Skull,Col. Chester Phillips
+The Red Skull,Howard Stark
+The Red Skull,Bucky
+The Red Skull,Peggy Carter
+The Red Skull,Steve Rogers/Captain America
 Thor,Fandral
 Thor,Sif
 Thor,Frigga
@@ -56,106 +572,92 @@ Thor,Hogun
 Thor,Odin
 Thor,Loki
 Thor,Jane Foster
-Fandral,Sif
-Fandral,Frigga
-Fandral,Darcy
-Fandral,Heimdall
-Fandral,Hogun
-Fandral,Odin
-Fandral,Loki
-Fandral,Jane Foster
-Sif,Frigga
-Sif,Darcy
-Sif,Heimdall
-Sif,Hogun
-Sif,Odin
-Sif,Loki
-Sif,Jane Foster
-Frigga,Darcy
-Frigga,Heimdall
-Frigga,Hogun
-Frigga,Odin
-Frigga,Loki
-Frigga,Jane Foster
-Darcy,Heimdall
-Darcy,Hogun
-Darcy,Odin
-Darcy,Loki
-Darcy,Jane Foster
-Heimdall,Hogun
-Heimdall,Odin
-Heimdall,Loki
-Heimdall,Jane Foster
-Hogun,Odin
-Hogun,Loki
-Hogun,Jane Foster
-Odin,Loki
-Odin,Jane Foster
-Loki,Jane Foster
-Steve Rogers/Captain America,Nick Fury
-Steve Rogers/Captain America,Bucky
-Steve Rogers/Captain America,Peggy Carter
-Steve Rogers/Captain America,The Red Skull
-Steve Rogers/Captain America,Dr. Abraham Erskine
-Steve Rogers/Captain America,Col. Chester Phillips
-Steve Rogers/Captain America,Howard Stark
-Bucky,Peggy Carter
-Bucky,The Red Skull
-Bucky,Dr. Abraham Erskine
-Bucky,Col. Chester Phillips
-Bucky,Howard Stark
-Peggy Carter,The Red Skull
-Peggy Carter,Dr. Abraham Erskine
-Peggy Carter,Col. Chester Phillips
-Peggy Carter,Howard Stark
-The Red Skull,Dr. Abraham Erskine
-The Red Skull,Col. Chester Phillips
-The Red Skull,Howard Stark
-Dr. Abraham Erskine,Col. Chester Phillips
-Dr. Abraham Erskine,Howard Stark
-Col. Chester Phillips,Howard Stark
-Tony Stark/Iron Man,Howard Stark
-Steve Rogers/Captain America,Black Widow
-Steve Rogers/Captain America,Thor
-Steve Rogers/Captain America,Tony Stark/Iron Man
-Steve Rogers/Captain America,Bruce Banner/Hulk
-Steve Rogers/Captain America,Hawkeye
-Steve Rogers/Captain America,Loki
-Steve Rogers/Captain America,Professor Erik Selvig
-Steve Rogers/Captain America,Agent Phil Coulson
-Black Widow,Thor
-Black Widow,Tony Stark/Iron Man
-Black Widow,Bruce Banner/Hulk
-Black Widow,Hawkeye
-Black Widow,Loki
-Black Widow,Professor Erik Selvig
-Black Widow,Agent Phil Coulson
 Thor,Tony Stark/Iron Man
 Thor,Bruce Banner/Hulk
 Thor,Hawkeye
 Thor,Loki
 Thor,Professor Erik Selvig
 Thor,Agent Phil Coulson
+Thor,Black Widow
+Thor,Nick Fury
+Thor,Quicksilver
+Thor,Scarlet Witch
+Thor,Steve Rogers/Captain America
+Thor,Ultron
+Tony Stark/Iron Man,Happy Hogan
+Tony Stark/Iron Man,Obadiah Stane/Iron Monger
+Tony Stark/Iron Man,Jim Rhodes
+Tony Stark/Iron Man,Virginia 'Pepper' Potts
+Tony Stark/Iron Man,Nick Fury
+Tony Stark/Iron Man,Agent Phil Coulson
+Tony Stark/Iron Man,Christine Everhart
+Tony Stark/Iron Man,Howard Stark
 Tony Stark/Iron Man,Bruce Banner/Hulk
 Tony Stark/Iron Man,Hawkeye
 Tony Stark/Iron Man,Loki
 Tony Stark/Iron Man,Professor Erik Selvig
 Tony Stark/Iron Man,Agent Phil Coulson
-Bruce Banner/Hulk,Hawkeye
-Bruce Banner/Hulk,Loki
-Bruce Banner/Hulk,Professor Erik Selvig
-Bruce Banner/Hulk,Agent Phil Coulson
-Hawkeye,Loki
-Hawkeye,Professor Erik Selvig
-Hawkeye,Agent Phil Coulson
-Loki,Professor Erik Selvig
-Loki,Agent Phil Coulson
-Professor Erik Selvig,Agent Phil Coulson
-Nick Fury,Black Widow
-Nick Fury,Thor
-Nick Fury,Tony Stark/Iron Man
-Nick Fury,Bruce Banner/Hulk
-Nick Fury,Hawkeye
-Nick Fury,Loki
-Nick Fury,Professor Erik Selvig
-Nick Fury,Agent Phil Coulson
+Tony Stark/Iron Man,Black Widow
+Tony Stark/Iron Man,Bucky Barnes/Winter Soldier
+Tony Stark/Iron Man,Sam Wilson/Falcon
+Tony Stark/Iron Man,Jim Rhodes
+Tony Stark/Iron Man,Hawkeye
+Tony Stark/Iron Man,Vision
+Tony Stark/Iron Man,Scarlet Witch
+Tony Stark/Iron Man,Scott Lang/Ant Man
+Tony Stark/Iron Man,Peter Parker/Spider-Man
+Tony Stark/Iron Man,Aldrich Killian
+Tony Stark/Iron Man,Black Panther
+Tony Stark/Iron Man,Black Widow
+Tony Stark/Iron Man,Maya Hansen
+Tony Stark/Iron Man,Nick Fury
+Tony Stark/Iron Man,Quicksilver
+Tony Stark/Iron Man,Savin
+Tony Stark/Iron Man,Scarlet Witch
+Tony Stark/Iron Man,Steve Rogers/Captain America
+Tony Stark/Iron Man,Steve Rogers/Captain America
+Tony Stark/Iron Man,The Mandarin
+Tony Stark/Iron Man,Thor
+Tony Stark/Iron Man,Ultron
+Ultron,Tony Stark/Iron Man
+Ultron,Steve Rogers/Captain America
+Ultron,Bruce Banner/Hulk
+Ultron,Thor
+Ultron,Black Widow
+Ultron,Vision
+Ultron,Hawkeye
+Ultron,Quicksilver
+Ultron,Scarlet Witch
+Ultron,Quicksilver
+Ultron,Scarlet Witch
+Virginia 'Pepper' Potts,Nick Fury
+Virginia 'Pepper' Potts,Agent Phil Coulson
+Virginia 'Pepper' Potts,Christine Everhart
+Virginia 'Pepper' Potts,Black Widow
+Virginia 'Pepper' Potts,Happy Hogan
+Virginia 'Pepper' Potts,Jim Rhodes
+Virginia 'Pepper' Potts,Obadiah Stane/Iron Monger
+Virginia 'Pepper' Potts,Tony Stark/Iron Man
+Virginia 'Pepper' Potts,Whiplash
+Vision,Scarlet Witch
+Vision,Scott Lang/Ant Man
+Vision,Peter Parker/Spider-Man
+Vision,Black Panther
+Vision,Black Widow
+Vision,Bucky Barnes/Winter Soldier
+Vision,Hawkeye
+Vision,Jim Rhodes
+Vision,Quicksilver
+Vision,Sam Wilson/Falcon
+Vision,Scarlet Witch
+Vision,Steve Rogers/Captain America
+Vision,Tony Stark/Iron Man
+Vision,Ultron
+Whiplash,Black Widow
+Whiplash,Happy Hogan
+Whiplash,Virginia 'Pepper' Potts
+Whiplash,James Rhodes
+Whiplash,Black Widow
+Whiplash,Justin Hammer
+Whiplash,Nick Fury
+Whiplash,Agent Phil Coulson

@@ -29,7 +29,7 @@
         Then calls fillHeroNetwork with the mcuCharacters
         */
 
-        var Avengers = ["IRON MAN/TONY STARK","CAPTAIN AMERICA","HULK/DR. ROBERT BRUC","BLACK WIDOW/NATASHA","HAWK","THOR/DR. DONALD BLAK"];
+        var Avengers = ["Tony Stark/Iron Man","Steve Rogers/Captain America","Bruce Banner/Hulk","Black Widow","Hawkeye","Thor"];
 
         function remove(array, element){
             var index = array.indexOf(element);
@@ -62,7 +62,7 @@
                 heroNetwork.nodes.push(charObj);
             })
 
-            d3.csv("Marvel_Social_Network/hero-network.csv", function(error, data) {
+            d3.csv("mcu-network.csv", function(error, data) {
                 if (error) console.log(error);
                 data.forEach(function(element){
                     hero1 = element["hero1"].trim();
@@ -72,17 +72,17 @@
                         if (Avengers.includes(hero1) && Avengers.includes(hero2)){
                             color = "#000000";
                         }
-                        else if (hero1 == "IRON MAN/TONY STARK" || hero2 == "IRON MAN/TONY STARK"){
+                        else if (hero1 == "Tony Stark/Iron Man" || hero2 == "Tony Stark/Iron Man"){
                             color = "#b20000";
-                        }else if (hero1 == "CAPTAIN AMERICA" || hero2 == "CAPTAIN AMERICA"){
+                        }else if (hero1 == "Steve Rogers/Captain America" || hero2 == "Steve Rogers/Captain America"){
                             color = "#3232ff";
-                        } else if (hero1 == "HULK/DR. ROBERT BRUC" || hero2 == "HULK/DR. ROBERT BRUC"){
+                        } else if (hero1 == "Bruce Banner/Hulk" || hero2 == "Bruce Banner/Hulk"){
                             color = "#4ca64c";
-                        } else if (hero1 == "BLACK WIDOW/NATASHA" || hero2 == "BLACK WIDOW/NATASHA"){
+                        } else if (hero1 == "Black Widow" || hero2 == "Black Widow"){
                             color = "#ffb732";
-                        } else if (hero1 == "HAWK" || hero2 == "HAWK"){
+                        } else if (hero1 == "Hawkeye" || hero2 == "Hawkeye"){
                             color = "#a64ca6";
-                        } else if (hero1 == "THOR/DR. DONALD BLAK" || hero2 == "THOR/DR. DONALD BLAK"){
+                        } else if (hero1 == "Thor" || hero2 == "Thor"){
                             color = "#ffff4c";
                         }else {
                             color = "#808080";
@@ -169,33 +169,33 @@
 
 
             nodes.forEach(function(d){
-                if (d.id == "IRON MAN/TONY STARK"){
+                if (d.id == "Tony Stark/Iron Man"){
                     d.fx = 50;
                     d.fy = 20;
                     d.x = 50;
                     d.y = 20;
                 }
-                else if (d.id == "CAPTAIN AMERICA"){
+                else if (d.id == "Steve Rogers/Captain America"){
                     d.fx = width/2 + 20;
                     d.fy = 50;
                     d.x = width/2 + 20;
                     d.y = 50;
-                } else if (d.id == "HULK/DR. ROBERT BRUC"){
+                } else if (d.id == "Bruce Banner/Hulk"){
                     d.fx = width - 50;
                     d.fy = 20;
                     d.x = width - 50;
                     d.y = 20;
-                } else if (d.id == "BLACK WIDOW/NATASHA"){
+                } else if (d.id == "Black Widow"){
                     d.fx = 20;
                     d.fy = height - 30;
                     d.x = 20;
                     d.y = height - 30;
-                } else if (d.id == "HAWK"){
+                } else if (d.id == "Hawkeye"){
                     d.fx = width/2 + 50;
                     d.fy = height - 20;
                     d.x = width/2 + 50;
                     d.y = height - 20;
-                } else if (d.id == "THOR/DR. DONALD BLAK"){
+                } else if (d.id == "Thor"){
                     d.fx = width - 20;
                     d.fy = height - 30;
                     d.x = width - 20;
