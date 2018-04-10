@@ -5,7 +5,9 @@
   <title> CS 3300 - Project 2 </title>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <script src = "https://unpkg.com/tooltip.js@1.2.0/dist/umd/tooltip.min.js"></script>
   <script src="scripts/d3/d3.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
 
 </head>
@@ -100,6 +102,10 @@
                 callback(heroNetwork);
             });
         }
+
+        function caps(words){
+            return words.toUpperCase();
+        }
         
         /* callback: create network
         */
@@ -118,9 +124,12 @@
                              .force("center", d3.forceCenter(width/2, height/2));
 
             //add hover (tooltip)
-            var toolTip = d3.select("body")
+
+            var tooltip = d3.select("body")
                             .append("div")
                             .attr("class", "tooltip")
+                            .attr("data-toogle", "tooltip")
+                            .attr("data-placement", "top")
                             .style("opacity", "0")
                             .style("display", "none");
 
@@ -149,17 +158,17 @@
                             .on("end", dragended))
                         //tooltip on mouseover
                         .on("mouseover", function(d){
-                            toolTip.transition()
+                            tooltip.transition()
                                 .duration(200)
                                 .style("display", "block")
                                 .style("opacity", 0.9);
-                            toolTip.html(d.id)
+                            tooltip.html(caps(d.id))
                                     .style("left", (d3.event.pageX) + "px")
                                     .style("top", (d3.event.pageY) + "px");
                             console.log(d.id);
                         })
                         .on("mouseout", function(d){
-                            toolTip.transition()
+                            tooltip.transition()
                                 .duration(500)
                                 .style("display", "none")
                                 .style("opacity", 0);
@@ -204,8 +213,8 @@
             })
 
             //info to node
-            node.append("title")
-                .text(function(d){ return d.id; });
+            // node.append("title")
+            //     .text(function(d){ return d.id; });
 
             //start simulation of nodes
             simulation.nodes(nodes)
