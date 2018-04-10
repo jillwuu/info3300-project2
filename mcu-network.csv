@@ -5,7 +5,7 @@ Agent Phil Coulson,Black Widow
 Agent Phil Coulson,Bruce Banner/Hulk
 Agent Phil Coulson,Happy Hogan
 Agent Phil Coulson,Hawkeye
-Agent Phil Coulson,Jim Rhodes
+Agent Phil Coulson,James Rhodes/War Machine
 Agent Phil Coulson,Loki
 Agent Phil Coulson,Nick Fury
 Agent Phil Coulson,Nick Fury
@@ -20,7 +20,7 @@ Agent Phil Coulson,Whiplash
 Aldrich Killian,The Mandarin
 Aldrich Killian,Happy Hogan
 Aldrich Killian,Pepper Potts
-Aldrich Killian,Jim Rhodes
+Aldrich Killian,James Rhodes/War Machine
 Aldrich Killian,Tony Stark/Iron Man
 Aldrich Killian,Savin
 Aldrich Killian,Maya Hansen
@@ -43,7 +43,7 @@ Black Panther,Tony Stark/Iron Man
 Black Panther,Black Widow
 Black Panther,Bucky Barnes/Winter Soldier
 Black Panther,Sam Wilson/Falcon
-Black Panther,Jim Rhodes
+Black Panther,James Rhodes/War Machine
 Black Panther,Hawkeye
 Black Panther,Vision
 Black Panther,Scarlet Witch
@@ -65,7 +65,7 @@ Black Widow,Sharon Carter
 Black Widow,Nick Fury
 Black Widow,Bucky Barnes/Winter Soldier
 Black Widow,Sam Wilson/Falcon
-Black Widow,Jim Rhodes
+Black Widow,James Rhodes/War Machine
 Black Widow,Hawkeye
 Black Widow,Vision
 Black Widow,Scarlet Witch
@@ -126,7 +126,7 @@ Bucky Barnes/Winter Soldier,Jasper Sitwell
 Bucky Barnes/Winter Soldier,Sharon Carter
 Bucky Barnes/Winter Soldier,Nick Fury
 Bucky Barnes/Winter Soldier,Sam Wilson/Falcon
-Bucky Barnes/Winter Soldier,Jim Rhodes
+Bucky Barnes/Winter Soldier,James Rhodes/War Machine
 Bucky Barnes/Winter Soldier,Hawkeye
 Bucky Barnes/Winter Soldier,Vision
 Bucky Barnes/Winter Soldier,Scarlet Witch
@@ -142,7 +142,7 @@ Bucky Barnes/Winter Soldier,Steve Rogers/Captain America
 Bucky Barnes/Winter Soldier,Tony Stark/Iron Man
 Christine Everhart,Agent Phil Coulson
 Christine Everhart,Happy Hogan
-Christine Everhart,Jim Rhodes
+Christine Everhart,James Rhodes/War Machine
 Christine Everhart,Nick Fury
 Christine Everhart,Obadiah Stane/Iron Monger
 Christine Everhart,Tony Stark/Iron Man
@@ -153,15 +153,15 @@ Col. Chester Phillips,Dr. Abraham Erskine
 Col. Chester Phillips,Peggy Carter
 Col. Chester Phillips,Steve Rogers/Captain America
 Col. Chester Phillips,The Red Skull
-Darcy,Heimdall
-Darcy,Hogun
-Darcy,Odin
-Darcy,Loki
-Darcy,Jane Foster
-Darcy,Fandral
-Darcy,Frigga
-Darcy,Sif
-Darcy,Thor
+Darcy Lewis,Heimdall
+Darcy Lewis,Hogun
+Darcy Lewis,Odin
+Darcy Lewis,Loki
+Darcy Lewis,Jane Foster
+Darcy Lewis,Fandral
+Darcy Lewis,Frigga
+Darcy Lewis,Sif
+Darcy Lewis,Thor
 Darren Cross/Yellowjacket,Dr. Hank Pym
 Darren Cross/Yellowjacket,Hope van Dyne
 Darren Cross/Yellowjacket,Scott Lang/Ant Man
@@ -179,14 +179,14 @@ Emil Blonksy,Bruce Banner/Hulk
 Emil Blonksy,General Thaddeus 'Thunderbolt' Ross
 Fandral,Sif
 Fandral,Frigga
-Fandral,Darcy
+Fandral,Darcy Lewis
 Fandral,Heimdall
 Fandral,Hogun
 Fandral,Odin
 Fandral,Loki
 Fandral,Jane Foster
 Fandral,Thor
-Frigga,Darcy
+Frigga,Darcy Lewis
 Frigga,Heimdall
 Frigga,Hogun
 Frigga,Odin
@@ -199,7 +199,7 @@ General Thaddeus 'Thunderbolt' Ross,Emil Blonksy
 General Thaddeus 'Thunderbolt' Ross,Betty Ross
 General Thaddeus 'Thunderbolt' Ross,Bruce Banner/Hulk
 Happy Hogan,Obadiah Stane/Iron Monger
-Happy Hogan,Jim Rhodes
+Happy Hogan,James Rhodes/War Machine
 Happy Hogan,Virginia 'Pepper' Potts
 Happy Hogan,Nick Fury
 Happy Hogan,Agent Phil Coulson
@@ -223,7 +223,7 @@ Hawkeye,Black Widow
 Hawkeye,Black Widow
 Hawkeye,Bruce Banner/Hulk
 Hawkeye,Bucky Barnes/Winter Soldier
-Hawkeye,Jim Rhodes
+Hawkeye,James Rhodes/War Machine
 Hawkeye,Nick Fury
 Hawkeye,Quicksilver
 Hawkeye,Sam Wilson/Falcon
@@ -238,7 +238,7 @@ Heimdall,Hogun
 Heimdall,Odin
 Heimdall,Loki
 Heimdall,Jane Foster
-Heimdall,Darcy
+Heimdall,Darcy Lewis
 Heimdall,Fandral
 Heimdall,Frigga
 Heimdall,Sif
@@ -246,7 +246,7 @@ Heimdall,Thor
 Hogun,Odin
 Hogun,Loki
 Hogun,Jane Foster
-Hogun,Darcy
+Hogun,Darcy Lewis
 Hogun,Fandral
 Hogun,Frigga
 Hogun,Heimdall
@@ -262,9 +262,9 @@ Howard Stark,Peggy Carter
 Howard Stark,Steve Rogers/Captain America
 Howard Stark,The Red Skull
 Howard Stark,Tony Stark/Iron Man
-Jim Rhodes,Black Widow
-Jim Rhodes,Whiplash
-Jane Foster,Darcy
+James Rhodes/War Machine,Black Widow
+James Rhodes/War Machine,Whiplash
+Jane Foster,Darcy Lewis
 Jane Foster,Fandral
 Jane Foster,Frigga
 Jane Foster,Heimdall
@@ -282,28 +282,28 @@ Jasper Sitwell,Bucky Barnes/Winter Soldier
 Jasper Sitwell,Sam Wilson/Falcon
 Jasper Sitwell,Sam Wilson/Falcon
 Jasper Sitwell,Steve Rogers/Captain America
-Jim Rhodes,Virginia 'Pepper' Potts
-Jim Rhodes,Nick Fury
-Jim Rhodes,Agent Phil Coulson
-Jim Rhodes,Christine Everhart
-Jim Rhodes,Hawkeye
-Jim Rhodes,Vision
-Jim Rhodes,Scarlet Witch
-Jim Rhodes,Scott Lang/Ant Man
-Jim Rhodes,Peter Parker/Spider-Man
-Jim Rhodes,Aldrich Killian
-Jim Rhodes,Black Panther
-Jim Rhodes,Black Widow
-Jim Rhodes,Bucky Barnes/Winter Soldier
-Jim Rhodes,Happy Hogan
-Jim Rhodes,Maya Hansen
-Jim Rhodes,Obadiah Stane/Iron Monger
-Jim Rhodes,Sam Wilson/Falcon
-Jim Rhodes,Savin
-Jim Rhodes,Steve Rogers/Captain America
-Jim Rhodes,The Mandarin
-Jim Rhodes,Tony Stark/Iron Man
-Jim Rhodes,Tony Stark/Iron Man
+James Rhodes/War Machine,Virginia 'Pepper' Potts
+James Rhodes/War Machine,Nick Fury
+James Rhodes/War Machine,Agent Phil Coulson
+James Rhodes/War Machine,Christine Everhart
+James Rhodes/War Machine,Hawkeye
+James Rhodes/War Machine,Vision
+James Rhodes/War Machine,Scarlet Witch
+James Rhodes/War Machine,Scott Lang/Ant Man
+James Rhodes/War Machine,Peter Parker/Spider-Man
+James Rhodes/War Machine,Aldrich Killian
+James Rhodes/War Machine,Black Panther
+James Rhodes/War Machine,Black Widow
+James Rhodes/War Machine,Bucky Barnes/Winter Soldier
+James Rhodes/War Machine,Happy Hogan
+James Rhodes/War Machine,Maya Hansen
+James Rhodes/War Machine,Obadiah Stane/Iron Monger
+James Rhodes/War Machine,Sam Wilson/Falcon
+James Rhodes/War Machine,Savin
+James Rhodes/War Machine,Steve Rogers/Captain America
+James Rhodes/War Machine,The Mandarin
+James Rhodes/War Machine,Tony Stark/Iron Man
+James Rhodes/War Machine,Tony Stark/Iron Man
 Justin Hammer,Black Widow
 Justin Hammer,Whiplash
 Loki,Jane Foster
@@ -311,7 +311,7 @@ Loki,Professor Erik Selvig
 Loki,Agent Phil Coulson
 Loki,Black Widow
 Loki,Bruce Banner/Hulk
-Loki,Darcy
+Loki,Darcy Lewis
 Loki,Fandral
 Loki,Frigga
 Loki,Hawkeye
@@ -327,7 +327,7 @@ Loki,Tony Stark/Iron Man
 Maya Hansen,The Mandarin
 Maya Hansen,Happy Hogan
 Maya Hansen,Pepper Potts
-Maya Hansen,Jim Rhodes
+Maya Hansen,James Rhodes/War Machine
 Maya Hansen,Tony Stark/Iron Man
 Maya Hansen,Aldrich Killian
 Maya Hansen,Savin
@@ -351,7 +351,7 @@ Nick Fury,Brock Rumlow
 Nick Fury,Bucky Barnes/Winter Soldier
 Nick Fury,Happy Hogan
 Nick Fury,Jasper Sitwell
-Nick Fury,Jim Rhodes
+Nick Fury,James Rhodes/War Machine
 Nick Fury,Obadiah Stane/Iron Monger
 Nick Fury,Sam Wilson/Falcon
 Nick Fury,Sam Wilson/Falcon
@@ -360,7 +360,7 @@ Nick Fury,Steve Rogers/Captain America
 Nick Fury,Tony Stark/Iron Man
 Nick Fury,Virginia 'Pepper' Potts
 Nick Fury,Whiplash
-Obadiah Stane/Iron Monger,Jim Rhodes
+Obadiah Stane/Iron Monger,James Rhodes/War Machine
 Obadiah Stane/Iron Monger,Virginia 'Pepper' Potts
 Obadiah Stane/Iron Monger,Nick Fury
 Obadiah Stane/Iron Monger,Agent Phil Coulson
@@ -369,7 +369,7 @@ Obadiah Stane/Iron Monger,Happy Hogan
 Obadiah Stane/Iron Monger,Tony Stark/Iron Man
 Odin,Loki
 Odin,Jane Foster
-Odin,Darcy
+Odin,Darcy Lewis
 Odin,Fandral
 Odin,Frigga
 Odin,Heimdall
@@ -390,7 +390,7 @@ Peter Parker/Spider-Man,Black Panther
 Peter Parker/Spider-Man,Black Widow
 Peter Parker/Spider-Man,Bucky Barnes/Winter Soldier
 Peter Parker/Spider-Man,Hawkeye
-Peter Parker/Spider-Man,Jim Rhodes
+Peter Parker/Spider-Man,James Rhodes/War Machine
 Peter Parker/Spider-Man,Sam Wilson/Falcon
 Peter Parker/Spider-Man,Scarlet Witch
 Peter Parker/Spider-Man,Scott Lang/Ant Man
@@ -428,7 +428,7 @@ Sam Wilson/Falcon,Brock Rumlow
 Sam Wilson/Falcon,Jasper Sitwell
 Sam Wilson/Falcon,Sharon Carter
 Sam Wilson/Falcon,Nick Fury
-Sam Wilson/Falcon,Jim Rhodes
+Sam Wilson/Falcon,James Rhodes/War Machine
 Sam Wilson/Falcon,Hawkeye
 Sam Wilson/Falcon,Vision
 Sam Wilson/Falcon,Scarlet Witch
@@ -449,7 +449,7 @@ Sam Wilson/Falcon,Tony Stark/Iron Man
 Savin,The Mandarin
 Savin,Happy Hogan
 Savin,Pepper Potts
-Savin,Jim Rhodes
+Savin,James Rhodes/War Machine
 Savin,Tony Stark/Iron Man
 Savin,Aldrich Killian
 Savin,Maya Hansen
@@ -471,7 +471,7 @@ Scarlet Witch,Black Panther
 Scarlet Witch,Black Widow
 Scarlet Witch,Bucky Barnes/Winter Soldier
 Scarlet Witch,Hawkeye
-Scarlet Witch,Jim Rhodes
+Scarlet Witch,James Rhodes/War Machine
 Scarlet Witch,Quicksilver
 Scarlet Witch,Sam Wilson/Falcon
 Scarlet Witch,Steve Rogers/Captain America
@@ -486,7 +486,7 @@ Scott Lang/Ant Man,Black Panther
 Scott Lang/Ant Man,Black Widow
 Scott Lang/Ant Man,Bucky Barnes/Winter Soldier
 Scott Lang/Ant Man,Hawkeye
-Scott Lang/Ant Man,Jim Rhodes
+Scott Lang/Ant Man,James Rhodes/War Machine
 Scott Lang/Ant Man,Sam Wilson/Falcon
 Scott Lang/Ant Man,Scarlet Witch
 Scott Lang/Ant Man,Steve Rogers/Captain America
@@ -501,7 +501,7 @@ Sharon Carter,Sam Wilson/Falcon
 Sharon Carter,Sam Wilson/Falcon
 Sharon Carter,Steve Rogers/Captain America
 Sif,Frigga
-Sif,Darcy
+Sif,Darcy Lewis
 Sif,Heimdall
 Sif,Hogun
 Sif,Odin
@@ -538,7 +538,7 @@ Steve Rogers/Captain America,Tony Stark/Iron Man
 Steve Rogers/Captain America,Black Widow
 Steve Rogers/Captain America,Bucky Barnes/Winter Soldier
 Steve Rogers/Captain America,Sam Wilson/Falcon
-Steve Rogers/Captain America,Jim Rhodes
+Steve Rogers/Captain America,James Rhodes/War Machine
 Steve Rogers/Captain America,Hawkeye
 Steve Rogers/Captain America,Vision
 Steve Rogers/Captain America,Scarlet Witch
@@ -549,7 +549,7 @@ Steve Rogers/Captain America,Scarlet Witch
 Steve Rogers/Captain America,Ultron
 The Mandarin,Happy Hogan
 The Mandarin,Pepper Potts
-The Mandarin,Jim Rhodes
+The Mandarin,James Rhodes/War Machine
 The Mandarin,Tony Stark/Iron Man
 The Mandarin,Aldrich Killian
 The Mandarin,Savin
@@ -566,7 +566,7 @@ The Red Skull,Steve Rogers/Captain America
 Thor,Fandral
 Thor,Sif
 Thor,Frigga
-Thor,Darcy
+Thor,Darcy Lewis
 Thor,Heimdall
 Thor,Hogun
 Thor,Odin
@@ -586,7 +586,7 @@ Thor,Steve Rogers/Captain America
 Thor,Ultron
 Tony Stark/Iron Man,Happy Hogan
 Tony Stark/Iron Man,Obadiah Stane/Iron Monger
-Tony Stark/Iron Man,Jim Rhodes
+Tony Stark/Iron Man,James Rhodes/War Machine
 Tony Stark/Iron Man,Virginia 'Pepper' Potts
 Tony Stark/Iron Man,Nick Fury
 Tony Stark/Iron Man,Agent Phil Coulson
@@ -600,7 +600,7 @@ Tony Stark/Iron Man,Agent Phil Coulson
 Tony Stark/Iron Man,Black Widow
 Tony Stark/Iron Man,Bucky Barnes/Winter Soldier
 Tony Stark/Iron Man,Sam Wilson/Falcon
-Tony Stark/Iron Man,Jim Rhodes
+Tony Stark/Iron Man,James Rhodes/War Machine
 Tony Stark/Iron Man,Hawkeye
 Tony Stark/Iron Man,Vision
 Tony Stark/Iron Man,Scarlet Witch
@@ -635,7 +635,7 @@ Virginia 'Pepper' Potts,Agent Phil Coulson
 Virginia 'Pepper' Potts,Christine Everhart
 Virginia 'Pepper' Potts,Black Widow
 Virginia 'Pepper' Potts,Happy Hogan
-Virginia 'Pepper' Potts,Jim Rhodes
+Virginia 'Pepper' Potts,James Rhodes/War Machine
 Virginia 'Pepper' Potts,Obadiah Stane/Iron Monger
 Virginia 'Pepper' Potts,Tony Stark/Iron Man
 Virginia 'Pepper' Potts,Whiplash
@@ -646,7 +646,7 @@ Vision,Black Panther
 Vision,Black Widow
 Vision,Bucky Barnes/Winter Soldier
 Vision,Hawkeye
-Vision,Jim Rhodes
+Vision,James Rhodes/War Machine
 Vision,Quicksilver
 Vision,Sam Wilson/Falcon
 Vision,Scarlet Witch
