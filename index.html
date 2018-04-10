@@ -24,13 +24,11 @@
         var radius = 5;
         
         /* Loading initial data:
-        declares Avengers array, which contains list of all Avenger names
-        declares and filles in mcuCharacters, which contains a list of all characters in the Marvel Cinematic Universe excluding the Avengers.
-        Then calls fillHeroNetwork with the mcuCharacters
         */
 
         var Avengers = ["Tony Stark/Iron Man","Steve Rogers/Captain America","Bruce Banner/Hulk","Black Widow","Hawkeye","Thor"];
 
+        /*function to remove certain characters (might not need)*/
         function remove(array, element){
             var index = array.indexOf(element);
             array.splice(index, 1);
@@ -39,6 +37,8 @@
         //create array of all the characters we want to represent
         var mcuCharacters = [];
         var mcuCharNoAveng = [];
+
+        //fill arrays with characters
         d3.csv("mcuCharacters.csv", function(data){
             data.forEach(function(d){
                 mcuCharacters.push(d.heroes);
@@ -64,6 +64,7 @@
 
             d3.csv("mcu-network.csv", function(error, data) {
                 if (error) console.log(error);
+                //create edges in the network
                 data.forEach(function(element){
                     hero1 = element["hero1"].trim();
                     hero2 = element["hero2"].trim();
@@ -96,16 +97,11 @@
 
 
                 })
-                console.log(heroNetwork);
                 callback(heroNetwork);
             });
         }
         
-        
-        
-        /* showMap:
-        Takes the svg, coordinate array, and line array to map the visual elements.
-        Can change the inputs to show Avenger connected characters or not.
+        /* callback: create network
         */
         function callback(heroMap){
              
@@ -115,17 +111,20 @@
             var nodes = heroMap.nodes;
             var links = heroMap.links;
 
+            //simulation of nodes (similar to electrons w/ forces between the nodes)
             var simulation = d3.forceSimulation()
                              .force("link", d3.forceLink().id(function(d) { return d.id; }))
                              .force("charge", d3.forceManyBody().strength(-1500))
                              .force("center", d3.forceCenter(width/2, height/2));
 
+            //add hover (tooltip)
             var toolTip = d3.select("body")
                             .append("div")
                             .attr("class", "tooltip")
                             .style("opacity", "0")
                             .style("display", "none");
 
+            //add lines between nodes
             var link = svg.append("g")
                         .attr("class", "links")
                         .selectAll("line")
@@ -136,7 +135,7 @@
                             return d.color;
                         })
                         .attr("stroke-opacity", "0.6");
-
+            //add nodes
             var node = svg.append("g")
                         .attr("class", "nodes")
                         .selectAll("circle")
@@ -148,6 +147,7 @@
                             .on("start", dragstarted)
                             .on("drag", dragged)
                             .on("end", dragended))
+                        //tooltip on mouseover
                         .on("mouseover", function(d){
                             toolTip.transition()
                                 .duration(200)
@@ -167,7 +167,7 @@
                         ;
             
 
-
+            //fixed location for avengers nodes
             nodes.forEach(function(d){
                 if (d.id == "Tony Stark/Iron Man"){
                     d.fx = 50;
@@ -203,12 +203,15 @@
                 } 
             })
 
+            //info to node
             node.append("title")
                 .text(function(d){ return d.id; });
 
+            //start simulation of nodes
             simulation.nodes(nodes)
                         .on("tick", ticked);
 
+            //start force simulation
             simulation.force("link")
                 .links(links);
 
@@ -224,6 +227,7 @@
                     .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
             }
 
+            //drag functionality for nodes
             function dragstarted(d) {
               if (!d3.event.active) simulation.alphaTarget(0.3).restart();
 
