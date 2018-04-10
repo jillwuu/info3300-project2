@@ -13,8 +13,11 @@
 </head>
     
 <body>
-    <h1>MARVEL™ Social Network</h1>
-    <svg />
+        <div id = "content">
+            <h1>MARVEL™ Social Network</h1>
+            <svg />
+        </div>
+
     <script>
 
         //inspiration: https://bl.ocks.org/mbostock/4062045
@@ -22,7 +25,7 @@
 
         var padding = 20;
         var height = 800;
-        var width = 1200;
+        var width = 1000;
         var radius = 5;
         
         /* Loading initial data:
@@ -128,7 +131,7 @@
             var tooltip = d3.select("body")
                             .append("div")
                             .attr("class", "tooltip")
-                            .attr("data-toogle", "tooltip")
+                            .attr("data-toggle", "tooltip")
                             .attr("data-placement", "top")
                             .style("opacity", "0")
                             .style("display", "none");
@@ -144,6 +147,14 @@
                             return d.color;
                         })
                         .attr("stroke-opacity", "0.6");
+
+            var sidebar = d3.select("body")
+                            .append("div")
+                            .attr("class", "sidebar")
+                            .style("display", "none");
+                            //add close button, close nav when clicked
+
+
             //add nodes
             var node = svg.append("g")
                         .attr("class", "nodes")
@@ -165,13 +176,33 @@
                             tooltip.html(caps(d.id))
                                     .style("left", (d3.event.pageX) + "px")
                                     .style("top", (d3.event.pageY) + "px");
-                            console.log(d.id);
                         })
                         .on("mouseout", function(d){
                             tooltip.transition()
                                 .duration(500)
                                 .style("display", "none")
                                 .style("opacity", 0);
+                        })
+                        .on("dblclick", function(d){
+                            sidebar.transition()
+                                 .duration(200)
+                                 .style("display", "block");
+
+                            sidebar.html(d.id);
+
+
+                            sidebar.append("a")
+                                .html("&times;")
+                                .attr("class", "closebtn")
+                                .on("click", function(d){
+                                    d3.select("#content")
+                                        .style("transform", "translate(-50px)");
+
+                                    sidebar.style("display", "none");
+                                })
+                            
+                            d3.select("#content")
+                                .style("transform", "translate(50px)");
                         })
                         ;
             
@@ -190,9 +221,9 @@
                     d.x = width/2;
                     d.y = 200;
                 } else if (d.id == "Hawkeye"){
-                    d.fx = 1000;
+                    d.fx = 850;
                     d.fy = 200;
-                    d.x = 1000;
+                    d.x = 850;
                     d.y = 200;
                 } else if (d.id == "Black Widow"){
                     d.fx = 200;
@@ -200,14 +231,14 @@
                     d.x = 200;
                     d.y = 600;
                 } else if (d.id == "Steve Rogers/Captain America"){
-                    d.fx = 600;
+                    d.fx = 500;
                     d.fy = 600;
-                    d.x = 600;
+                    d.x = 500;
                     d.y = 600;
                 } else if (d.id == "Thor"){
-                    d.fx = 1000;
+                    d.fx = 850;
                     d.fy = 600;
-                    d.x = 1000;
+                    d.x = 850;
                     d.y = 600;
                 } 
             })
@@ -252,6 +283,5 @@
             }
             
         }
-    
     </script>
 </body>
