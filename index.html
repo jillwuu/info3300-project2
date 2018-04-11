@@ -212,6 +212,8 @@
                             
                             d3.select("#content")
                                 .style("transform", "translate(50px)");
+                            
+                            showHeroStats(sidebar, d.id);
                         })
                         ;
             
@@ -291,6 +293,20 @@
               simulation.alphaTarget(0).restart()
             }
             
+        }
+        
+        function showHeroStats(sidebar, hero){
+            d3.csv("characterStats.csv", function(data){
+                data.forEach(function (d){
+                    if (d.heroes == hero){
+                        console.log(d.images);
+                        sidebar.append('img')
+                            .attr('class', 'picture')
+                            .attr('width', '200')
+                            .attr('src', d.images);
+                    }
+                })
+            })
         }
     </script>
 </body>
