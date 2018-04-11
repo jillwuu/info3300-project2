@@ -2,12 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title> CS 3300 - Project 2 </title>
+  <title> Marvel Social Network </title>
   <link rel="stylesheet" type="text/css" href="styles/style.css"/>
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <script src = "https://unpkg.com/tooltip.js@1.2.0/dist/umd/tooltip.min.js"></script>
   <script src="scripts/d3/d3.min.js"></script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
 
 
 </head>
@@ -207,7 +208,10 @@
                                 });
                             
                             sidebar.append("div")
-                                    .attr("class", "sidebar-content")
+                                    .attr("class", "sidebar-content");
+                                    
+                            sidebar.append("div")
+                                    .attr("class", "hero-name")
                                     .html(d.id);
 
                             
@@ -300,23 +304,80 @@
             d3.csv("characterStats.csv", function(data){
                 data.forEach(function (d){
                     if (d.heroes == hero){
-                        console.log(d.images);
-                        sidebar.append('img')
-                            .attr('dy', '0em')
-                            .attr('class', 'picture')
-                            .attr('width', '200')
-                            .attr('src', d.images);
-                        sidebar.append('text')
-                            .text('Actor: ' + d.Actor);
-                        sidebar.append('text')
-                            .attr('dy', '1em')
-                            .text('Powers: ' + d.powers);
-                        sidebar.append('text')
-                            .text('Abilities: ' + d.abilities);
-                        sidebar.append('text')
-                            .text('Movie Appearances: ' + d.movieAppearances);
-                        sidebar.append('text')
-                            .text('Trivia: ' + d.trivia);
+                        //console.log(d.images);
+                        sidebar.append("div")
+                                .attr("class", "hero-image")
+                                .append('img')
+                                .attr('dy', '0em')
+                                .attr('class', 'picture')
+                                .attr('width', '200')
+                                .attr('src', d.images);
+                        
+                        var actor = sidebar.append("div")
+                                    .attr("class", "hero-actor");
+
+                        actor.append('text')
+                             .attr("class", "info-header")
+                                .text('ACTOR: ');
+
+                        actor.append('text')
+                            .attr("class", "info")
+                            .text(d.Actor);
+
+                        var powers = sidebar.append("div")
+                                    .attr("class", "hero-powers");
+                        
+                        powers.append('text')
+                                .attr('dy', '1em')
+                                .attr("class", "info-header")
+                                .text('POWERS: ');
+
+                       powers.append('text')
+                            .attr("class", "info")
+                            .text(d.powers);
+                            
+
+                        var abilities = sidebar.append("div")
+                                    .attr("class", "hero-abilites");
+
+                        abilities.append('text')
+                                .attr('dy', '1em')
+                                .attr("class", "info-header")
+                                .text('ABILITIES: ');
+
+                        abilities.append('text')
+                            .attr("class", "info")
+                            .text(d.abilities);
+
+
+                        var appearances = sidebar.append("div")
+                                    .attr("class", "hero-appearances");
+
+                        appearances.append('text')
+                                .attr('dy', '1em')
+                                .attr("class", "info-header")
+                                .text('APPEARANCES: ');
+
+                        appearances.append('text')
+                            .attr("class", "info")
+                            .text(d.movieAppearances);
+
+                        var trivia = sidebar.append("div")
+                                    .attr("class", "hero-trivia");
+
+                        trivia.append('text')
+                                .attr('dy', '1em')
+                                .attr("class", "info-header")
+                                .text('TRIVIA: ');
+
+                        trivia.append('text')
+                            .attr("class", "info")
+                            .text(d.trivia);
+                        
+                        
+                        
+                        // sidebar.append('text')
+                        //     .text('Trivia: ' + d.trivia);
                     }
                 })
             })

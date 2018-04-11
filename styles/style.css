@@ -43,22 +43,25 @@ div.tooltip {
 
 
 div.sidebar{
-  height: 100%;
+  height: 99%;
   width: 250px;
   position: fixed;
   background-color: white;
   z-index: 1;
   top: 0;
   left: 0;
-  padding-top: 15px;
+  padding-top: 10px;
   font-family: 'Anton', sans-serif;
   text-align: center;
+  overflow-y: auto;
 
 }
 
 #content{
   margin: auto;
   width: 1000px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 
@@ -67,3 +70,21 @@ div.sidebar{
     margin-left: 200px;
     font-size: 40px;
 }
+
+.hero-name{
+    font-size: 20px;
+    margin: auto;
+}
+
+
+.info-header{
+  font-family: News Cycle;
+  font-style: bold;
+}
+
+.info{
+  font-family: News Cycle;
+  font-size: 14px;
+}
+
+
