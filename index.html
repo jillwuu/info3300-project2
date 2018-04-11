@@ -198,7 +198,7 @@
                                 .attr("class", "closebtn")
                                 .on("click", function(d){
                                     d3.select("#content")
-                                        .style("transform", "translate(-50px)");
+                                        .style("transform", "translate(-100px)");
 
                                     d3.select(".sidebar").selectAll("*").remove();
 
@@ -216,7 +216,7 @@
 
                             
                             d3.select("#content")
-                                .style("transform", "translate(50px)");
+                                .style("transform", "translate(100px)");
                             
                             showHeroStats(sidebar, d.id);
                         })
@@ -374,10 +374,6 @@
                             .attr("class", "info")
                             .text(d.trivia);
                         
-                        
-                        
-                        // sidebar.append('text')
-                        //     .text('Trivia: ' + d.trivia);
                     }
                 })
             })

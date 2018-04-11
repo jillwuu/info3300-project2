@@ -44,7 +44,7 @@ div.tooltip {
 
 div.sidebar{
   height: 99%;
-  width: 250px;
+  width: 300px;
   position: fixed;
   background-color: white;
   z-index: 1;
