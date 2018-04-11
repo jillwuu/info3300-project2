@@ -10,6 +10,10 @@
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
   <script>
+    function initialize(){
+      addMovie([]);
+    }
+
     var mcuMovies = [];
     function toggle(button){
       console.log(button.style.opacity);
@@ -44,6 +48,7 @@
         </div>
 
     <script>
+        initialize();
         //inspiration: https://bl.ocks.org/mbostock/4062045
 
         var padding = 20;
@@ -279,9 +284,9 @@
                     d.y = 600;
                 } else if (d.id == "Steve Rogers/Captain America"){
                     d.fx = 500;
-                    d.fy = 600;
+                    d.fy = 700;
                     d.x = 500;
-                    d.y = 600;
+                    d.y = 700;
                 } else if (d.id == "Thor"){
                     d.fx = 850;
                     d.fy = 600;
