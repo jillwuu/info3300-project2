@@ -26,7 +26,7 @@
         var padding = 20;
         var height = 800;
         var width = 1000;
-        var radius = 5;
+        var radius = 8;
         
         /* Loading initial data:
         */
@@ -161,7 +161,7 @@
                         .selectAll("circle")
                         .data(nodes)
                         .enter().append("circle")
-                        .attr("r", 5)
+                        .attr("r", 8)
                         .attr("fill", "white")
                         .call(d3.drag()
                             .on("start", dragstarted)
