@@ -335,7 +335,7 @@
                 .attr("y1", function (d){ return yScale(connections.length, connections.indexOf(d))})
                 .attr("x2", 125)
                 .attr("y2", 125)
-                .attr("stroke", "black");
+                .attr("stroke", "rgb(0, 198, 209)");
 
             miniNetwork.selectAll("circle")
               .data(connections)
@@ -343,7 +343,7 @@
               .attr("cx", function (d){ return xScale(connections.length, connections.indexOf(d))})
               .attr("cy", function (d){ return yScale(connections.length, connections.indexOf(d))})
               .attr("r", 8)
-              .attr("fill", "black")
+              .attr("fill", "rgb(0, 198, 209)")
               .on("mouseover", function(d){
                   tooltip.transition()
                       .duration(200)
@@ -364,7 +364,7 @@
               .attr("cx", 125)
               .attr("cy", 125)
               .attr("r", 8)
-              .attr("fill", "black");
+              .attr("fill", "rgb(0, 198, 209)");
 
 
             d3.csv("characterStats.csv", function(data){

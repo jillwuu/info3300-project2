@@ -1,5 +1,5 @@
 html,body{
-    background-color: #D3D3D3;
+    background-color: black;
 }
 h1{
     width: 1000px;
@@ -46,12 +46,13 @@ div.sidebar{
   height: 99%;
   width: 300px;
   position: fixed;
-  background-color: white;
+  background-color: black;
   z-index: 1;
   top: 0;
   left: 0;
   padding-top: 10px;
   font-family: 'Anton', sans-serif;
+  color: rgb(0, 198, 209);
   text-align: center;
   overflow-y: auto;
 
