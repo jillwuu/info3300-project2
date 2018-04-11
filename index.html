@@ -184,6 +184,8 @@
                                 .style("opacity", 0);
                         })
                         .on("dblclick", function(d){
+                            d3.select(".sidebar").selectAll("*").remove();
+
                             sidebar.transition()
                                  .duration(200)
                                  .style("display", "block");
@@ -200,7 +202,7 @@
 
                                     d3.select(".sidebar").selectAll("*").remove();
 
-                                    //console.log(sidebar);
+                                    console.log(sidebar);
 
                                     sidebar.style("display", "none");
                                 });
