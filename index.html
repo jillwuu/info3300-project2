@@ -9,7 +9,22 @@
   <script src="scripts/d3/d3.min.js"></script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
-
+  <script>
+    var mcuMovies = [];
+    function toggle(button){
+      console.log(button.style.opacity);
+      if (button.style.opacity == 1){
+        button.style.opacity = 0.5;
+        var index = mcuMovies.indexOf(button.value);
+        mcuMovies.splice(index, 1);
+        addMovie(mcuMovies);
+      } else {
+        button.style.opacity = 1;
+        mcuMovies.push(button.value);
+        addMovie(mcuMovies);
+      }
+    }
+  </script>
 
 </head>
 
@@ -18,9 +33,17 @@
             <h1>MARVEL™ Social Network</h1>
             <svg />
         </div>
+        <div id = "buttons">
+          <button class="movie-button" value='Iron Man' onclick="toggle(this)">Iron Man</button>
+          <button class="movie-button" value='Captain America' onclick="toggle(this)">Captain America</button>
+          <button class="movie-button" value='Hulk' onclick="toggle(this)">Hulk</button>
+          <button class="movie-button" value='Thor' onclick="toggle(this)">Thor</button>
+          <button class="movie-button" value='Ant-Man' onclick="toggle(this)">Ant-Man</button>
+          <button class="movie-button" value='Avengers' onclick="toggle(this)">Avengers</button>
+          <button class="movie-button" value='Civil War' onclick="toggle(this)">Civil War</button>
+        </div>
 
     <script>
-
         //inspiration: https://bl.ocks.org/mbostock/4062045
 
         var padding = 20;
@@ -30,30 +53,36 @@
 
         /* Loading initial data:
         */
-
         var Avengers = ["Tony Stark/Iron Man","Steve Rogers/Captain America","Bruce Banner/Hulk","Black Widow","Hawkeye","Thor"];
 
-        /*function to remove certain characters (might not need)*/
-        function remove(array, element){
-            var index = array.indexOf(element);
-            array.splice(index, 1);
-        }
+        function addMovie(movie){
+          /*function to remove certain characters (might not need)*/
+          function remove(array, element){
+              var index = array.indexOf(element);
+              array.splice(index, 1);
+          }
 
-        //create array of all the characters we want to represent
-        var mcuCharacters = [];
-        var mcuCharNoAveng = [];
+          //create array of all the characters we want to represent
+          var mcuCharacters = [];
+          var mcuCharNoAveng = [];
+          console.log(movie);
 
-        //fill arrays with characters
-        d3.csv("mcuCharacters.csv", function(data){
+          //fill arrays with characters
+          d3.csv("mcuCharacters.csv", function(data){
             data.forEach(function(d){
+              if (movie.includes(d.movies)){
                 mcuCharacters.push(d.heroes);
                 mcuCharNoAveng.push(d.heroes);
+              }
             })
-            Avengers.forEach(function(d){
-                mcuCharacters.push(d);
+
+            Avengers.forEach(function (d){
+              mcuCharacters.push(d);
             })
+
             fillHeroNetwork(mcuCharacters, mcuCharNoAveng);
-        })
+          })
+        }
 
         function fillHeroNetwork(mcuCharacters, mcuCharNoAveng){
             //initialize heronetwork
@@ -76,7 +105,7 @@
                     if(mcuCharacters.includes(hero1) && mcuCharacters.includes(hero2) ){
                         var color;
                         if (Avengers.includes(hero1) && Avengers.includes(hero2)){
-                            color = "#000000";
+                            color = "white";
                         }
                         else if (hero1 == "Tony Stark/Iron Man" || hero2 == "Tony Stark/Iron Man"){
                             color = "#b20000";
@@ -113,7 +142,8 @@
         /* callback: create network
         */
         function callback(heroMap){
-
+            d3.select("svg").remove();
+            d3.select("body").append("svg");
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
 
