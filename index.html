@@ -306,6 +306,9 @@
                             .attr('class', 'picture')
                             .attr('width', '200')
                             .attr('src', d.images);
+                        sidebar.append('text')
+                            .text('Powers:')
+                            .text(d.powers);
                     }
                 })
             })
