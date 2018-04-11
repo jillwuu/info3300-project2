@@ -12,7 +12,7 @@
 
 
 </head>
-    
+
 <body>
         <div id = "content">
             <h1>MARVEL™ Social Network</h1>
@@ -27,7 +27,7 @@
         var height = 800;
         var width = 1000;
         var radius = 8;
-        
+
         /* Loading initial data:
         */
 
@@ -109,11 +109,11 @@
         function caps(words){
             return words.toUpperCase();
         }
-        
+
         /* callback: create network
         */
         function callback(heroMap){
-             
+
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
 
@@ -190,7 +190,7 @@
                                  .duration(200)
                                  .style("display", "block");
 
-                            
+
                             //sidebar.html(d.id);
 
                             sidebar.append("a")
@@ -206,22 +206,22 @@
 
                                     sidebar.style("display", "none");
                                 });
-                            
+
                             sidebar.append("div")
                                     .attr("class", "sidebar-content");
-                                    
+
                             sidebar.append("div")
                                     .attr("class", "hero-name")
                                     .html(d.id);
 
-                            
+
                             d3.select("#content")
                                 .style("transform", "translate(50px)");
-                            
-                            showHeroStats(sidebar, d.id);
+
+                            showHeroStats(sidebar, d.id, heroMap);
                         })
                         ;
-            
+
 
             //fixed location for avengers nodes
             nodes.forEach(function(d){
@@ -256,7 +256,7 @@
                     d.fy = 600;
                     d.x = 850;
                     d.y = 600;
-                } 
+                }
             })
 
             //info to node
@@ -297,10 +297,75 @@
             function dragended(d) {
               simulation.alphaTarget(0).restart()
             }
-            
+
         }
-        
-        function showHeroStats(sidebar, hero){
+
+        function showHeroStats(sidebar, hero, heroNetwork){
+          function xScale(total, node){
+            var a = ((2 * Math.PI)/total) * node;
+            var x = 125 + (100 * Math.cos(a));
+            return x;
+          }
+          function yScale(total, node){
+            var a = ((2 * Math.PI)/total) * node;
+            var y = 125 + (100 * Math.sin(a));
+            return y;
+          }
+
+
+          var connections = [];
+          var source;
+          heroNetwork.links.forEach(function (d){
+            if (d.source.id == hero && !connections.includes(d.target)){
+              connections.push(d.target);
+              source = d.source;
+              console.log(d.source.id);
+            }
+          })
+
+          var miniNetwork = sidebar.append("svg")
+            .attr("height", 250)
+            .attr("width", 250);
+
+            miniNetwork.selectAll("line")
+                .data(connections)
+                .enter().append("line")
+                .attr("x1", function (d){ return xScale(connections.length, connections.indexOf(d))})
+                .attr("y1", function (d){ return yScale(connections.length, connections.indexOf(d))})
+                .attr("x2", 125)
+                .attr("y2", 125)
+                .attr("stroke", "black");
+
+            miniNetwork.selectAll("circle")
+              .data(connections)
+              .enter().append("circle")
+              .attr("cx", function (d){ return xScale(connections.length, connections.indexOf(d))})
+              .attr("cy", function (d){ return yScale(connections.length, connections.indexOf(d))})
+              .attr("r", 8)
+              .attr("fill", "black")
+              .on("mouseover", function(d){
+                  tooltip.transition()
+                      .duration(200)
+                      .style("display", "block")
+                      .style("opacity", 0.9);
+                  tooltip.html(caps(d.id))
+                          .style("left", (d3.event.pageX) + "px")
+                          .style("top", (d3.event.pageY) + "px");
+              })
+              .on("mouseout", function(d){
+                  tooltip.transition()
+                      .duration(500)
+                      .style("display", "none")
+                      .style("opacity", 0);
+              });
+
+            miniNetwork.append("circle")
+              .attr("cx", 125)
+              .attr("cy", 125)
+              .attr("r", 8)
+              .attr("fill", "black");
+
+
             d3.csv("characterStats.csv", function(data){
                 data.forEach(function (d){
                     if (d.heroes == hero){
@@ -312,7 +377,7 @@
                                 .attr('class', 'picture')
                                 .attr('width', '200')
                                 .attr('src', d.images);
-                        
+
                         var actor = sidebar.append("div")
                                     .attr("class", "hero-actor");
 
@@ -326,7 +391,7 @@
 
                         var powers = sidebar.append("div")
                                     .attr("class", "hero-powers");
-                        
+
                         powers.append('text')
                                 .attr('dy', '1em')
                                 .attr("class", "info-header")
@@ -335,7 +400,7 @@
                        powers.append('text')
                             .attr("class", "info")
                             .text(d.powers);
-                            
+
 
                         var abilities = sidebar.append("div")
                                     .attr("class", "hero-abilites");
@@ -373,9 +438,10 @@
                         trivia.append('text')
                             .attr("class", "info")
                             .text(d.trivia);
-                        
-                        
-                        
+
+
+
+
                         // sidebar.append('text')
                         //     .text('Trivia: ' + d.trivia);
                     }
