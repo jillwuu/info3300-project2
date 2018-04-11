@@ -50,7 +50,6 @@ div.sidebar{
   z-index: 1;
   top: 0;
   left: 0;
-  padding-top: 60px;
 }
 
 #content{
@@ -58,9 +57,14 @@ div.sidebar{
   width: 1000px;
 }
 
-.closebtn{
+/*#closebtn{
   position: fixed;
   top: 0;
-  font-size: 36px;
-  margin-left: 60px;
+  margin-left: 200px;
+
+}*/
+
+.closebtn{
+    margin-left: 200px;
+    font-size: 36px;
 }

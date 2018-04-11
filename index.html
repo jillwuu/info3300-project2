@@ -188,8 +188,8 @@
                                  .duration(200)
                                  .style("display", "block");
 
-                            sidebar.html(d.id);
-
+                            
+                            //sidebar.html(d.id);
 
                             sidebar.append("a")
                                 .html("&times;")
@@ -198,8 +198,17 @@
                                     d3.select("#content")
                                         .style("transform", "translate(-50px)");
 
+                                    d3.select(".sidebar").selectAll("*").remove();
+
+                                    //console.log(sidebar);
+
                                     sidebar.style("display", "none");
-                                })
+                                });
+                            
+                            sidebar.append("div")
+                                    .attr("class", "sidebar-content")
+                                    .html(d.id);
+
                             
                             d3.select("#content")
                                 .style("transform", "translate(50px)");
