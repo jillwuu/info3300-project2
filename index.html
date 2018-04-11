@@ -302,12 +302,21 @@
                     if (d.heroes == hero){
                         console.log(d.images);
                         sidebar.append('img')
+                            .attr('dy', '0em')
                             .attr('class', 'picture')
                             .attr('width', '200')
                             .attr('src', d.images);
                         sidebar.append('text')
-                            .text('Powers:')
-                            .text(d.powers);
+                            .text('Actor: ' + d.Actor);
+                        sidebar.append('text')
+                            .attr('dy', '1em')
+                            .text('Powers: ' + d.powers);
+                        sidebar.append('text')
+                            .text('Abilities: ' + d.abilities);
+                        sidebar.append('text')
+                            .text('Movie Appearances: ' + d.movieAppearances);
+                        sidebar.append('text')
+                            .text('Trivia: ' + d.trivia);
                     }
                 })
             })
