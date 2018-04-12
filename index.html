@@ -166,7 +166,7 @@
 
             //add hover (tooltip)
 
-            var tooltip = d3.select("#content")
+            var tooltip = d3.select("body")
                             .append("div")
                             .attr("class", "tooltip")
                             .attr("data-toggle", "tooltip")
@@ -242,6 +242,9 @@
 
                                     d3.select(".sidebar").selectAll("*").remove();
 
+                                    d3.select(".tooltip")
+                                        .style("transform", "none");
+
                                     console.log("remove stuff");
 
                                     sidebar.style("display", "none");
@@ -255,6 +258,9 @@
 
                             d3.select("#content")
                                 .style("transform", "translateX(5vw)");
+
+                            // d3.select(".tooltip")
+                            //     .style("transform", "translateX(5vw)");
 
                             showHeroStats(sidebar, d.id, heroMap);
 
