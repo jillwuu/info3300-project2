@@ -151,7 +151,7 @@
             d3.select("svg").remove();
             d3.select(".sidebar").remove();
             d3.select(".tooltip").remove();
-            d3.select("body").append("svg");
+            d3.select("#content").append("svg");
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
 
@@ -166,7 +166,7 @@
 
             //add hover (tooltip)
 
-            var tooltip = d3.select("body")
+            var tooltip = d3.select("#content")
                             .append("div")
                             .attr("class", "tooltip")
                             .attr("data-toggle", "tooltip")
@@ -238,7 +238,7 @@
                                 .attr("class", "closebtn")
                                 .on("click", function(d){
                                     d3.select("#content")
-                                        .style("transform", "translate(-100px)");
+                                        .style("transform", "none");
 
                                     d3.select(".sidebar").selectAll("*").remove();
 
@@ -247,8 +247,6 @@
                                     sidebar.style("display", "none");
                                 });
 
-                            // sidebar.append("div")
-                            //         .attr("class", "sidebar-content");
 
                             sidebar.append("div")
                                     .attr("class", "hero-name")
@@ -256,7 +254,7 @@
 
 
                             d3.select("#content")
-                                .style("transform", "translate(100px)");
+                                .style("transform", "translateX(5vw)");
 
                             showHeroStats(sidebar, d.id, heroMap);
 
