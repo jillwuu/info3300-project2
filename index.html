@@ -149,9 +149,16 @@
         */
         function callback(heroMap){
             d3.select("svg").remove();
-            d3.select(".sidebar").remove();
+            // d3.select(".sidebar").remove();
             d3.select(".tooltip").remove();
+
             d3.select("#content").append("svg");
+
+
+            // d3.select("#content")
+            //     .style("transform", "none");
+
+
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
 
@@ -173,6 +180,9 @@
                             .attr("data-placement", "top")
                             .style("opacity", "0")
                             .style("display", "none");
+
+            // d3.select(".tooltip")
+            //         .style("transform", "none");
 
             //add lines between nodes
             var link = svg.append("g")
@@ -346,6 +356,15 @@
         }
 
         function showHeroStats(sidebar, hero, heroNetwork){
+
+            var tooltipSidebar = d3.select(".sidebar")
+                            .append("div")
+                            .attr("class", "tooltip")
+                            .attr("data-toggle", "tooltip")
+                            .attr("data-placement", "top")
+                            .style("opacity", "0")
+                            .style("display", "none");
+
           function xScale(total, node){
             var a = ((2 * Math.PI)/total) * node;
             var x = 125 + (100 * Math.cos(a));
@@ -389,16 +408,17 @@
               .attr("r", 8)
               .attr("fill", "rgb(0, 198, 209)")
               .on("mouseover", function(d){
-                  tooltip.transition()
+                    console.log("sidebar hover");
+                    tooltipSidebar.transition()
                       .duration(200)
                       .style("display", "block")
                       .style("opacity", 0.9);
-                  tooltip.html(caps(d.id))
+                  tooltipSidebar.html(caps(d.id))
                           .style("left", (d3.event.pageX) + "px")
                           .style("top", (d3.event.pageY) + "px");
               })
               .on("mouseout", function(d){
-                  tooltip.transition()
+                  tooltipSidebar.transition()
                       .duration(500)
                       .style("display", "none")
                       .style("opacity", 0);
