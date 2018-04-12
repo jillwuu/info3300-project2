@@ -15,6 +15,7 @@
     }
 
     var mcuMovies = [];
+
     function toggle(button){
       console.log(button.style.opacity);
       if (button.style.opacity == 1){
@@ -35,16 +36,17 @@
 <body>
         <div id = "content">
             <h1>MARVEL™ Social Network</h1>
+            <div id = "buttons">
+              <button class="movie-button" value='Iron Man' onclick="toggle(this)">Iron Man</button>
+              <button class="movie-button" value='Captain America' onclick="toggle(this)">Captain America</button>
+              <button class="movie-button" value='Hulk' onclick="toggle(this)">Hulk</button>
+              <button class="movie-button" value='Thor' onclick="toggle(this)">Thor</button>
+              <button class="movie-button" value='Avengers' onclick="toggle(this)">Avengers</button>
+              <button class="movie-button" value='Civil War' onclick="toggle(this)">Civil War</button>
+            </div>
             <svg />
         </div>
-        <div id = "buttons">
-          <button class="movie-button" value='Iron Man' onclick="toggle(this)">Iron Man</button>
-          <button class="movie-button" value='Captain America' onclick="toggle(this)">Captain America</button>
-          <button class="movie-button" value='Hulk' onclick="toggle(this)">Hulk</button>
-          <button class="movie-button" value='Thor' onclick="toggle(this)">Thor</button>
-          <button class="movie-button" value='Avengers' onclick="toggle(this)">Avengers</button>
-          <button class="movie-button" value='Civil War' onclick="toggle(this)">Civil War</button>
-        </div>
+        
 
     <script>
         initialize();
@@ -147,6 +149,8 @@
         */
         function callback(heroMap){
             d3.select("svg").remove();
+            d3.select(".sidebar").remove();
+            d3.select(".tooltip").remove();
             d3.select("body").append("svg");
             var svg = d3.select("svg")
                 .attr("height", height).attr("width", width);
@@ -220,6 +224,8 @@
                         .on("dblclick", function(d){
                             d3.select(".sidebar").selectAll("*").remove();
 
+                            console.log("remove stuff");
+
                             sidebar.transition()
                                  .duration(200)
                                  .style("display", "block");
@@ -236,13 +242,13 @@
 
                                     d3.select(".sidebar").selectAll("*").remove();
 
-                                    console.log(sidebar);
+                                    console.log("remove stuff");
 
                                     sidebar.style("display", "none");
                                 });
 
-                            sidebar.append("div")
-                                    .attr("class", "sidebar-content");
+                            // sidebar.append("div")
+                            //         .attr("class", "sidebar-content");
 
                             sidebar.append("div")
                                     .attr("class", "hero-name")
