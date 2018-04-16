@@ -47,7 +47,7 @@
             </div>
             <svg />
         </div>
-        
+
 
     <script>
         initialize();
@@ -165,6 +165,38 @@
 
             var nodes = heroMap.nodes;
             var links = heroMap.links;
+            var color = d3.scaleOrdinal().domain(["Tony Stark/Iron Man", "Steve Rogers/Captain America", "Bruce Banner/Hulk", "Black Widow", "Hawkeye", "Thor"])
+                                .range(["#b20000", "#3232ff", "#4ca64c", "#ffb732", "#a64ca6", "#ffff4c"]);
+            var legendRectsize = 18;
+            var legendSpacing = 4;
+
+            var legend = svg.selectAll('.legend')
+                            .data(color.domain())
+                            .enter()
+                            .append('g')
+                            .attr('class', 'legend')
+                            .attr('transform', function(d, i) {
+                                // console.log(d);
+                                var height = legendRectsize + legendSpacing;
+                                var offset = height * color.domain().length / 10;
+                                var horz = -2;
+                                var vert = i * height - offset + 20;
+                                return 'translate(' + horz + ',' + vert + ')';
+                            });
+
+            legend.append('rect')
+                  .attr('width', legendRectsize)
+                  .attr('height', legendRectsize)
+                  .style('fill', color)
+                  .style('stroke', color);
+
+            legend.append('text')
+                  .attr('x', legendRectsize + legendSpacing)
+                  .attr('y', legendRectsize - legendSpacing)
+                  .attr("fill", "white")
+                  .text(function(d) {
+                      return d;
+                  });
 
             //simulation of nodes (similar to electrons w/ forces between the nodes)
             var simulation = d3.forceSimulation()
@@ -202,7 +234,7 @@
                             .attr("class", "sidebar")
                             .style("display", "none");
                             //add close button, close nav when clicked
-
+        
 
             //add nodes
             var node = svg.append("g")

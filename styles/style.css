@@ -117,3 +117,13 @@ div.sidebar{
    font-size: 13px;
    opacity: 0.5;
 }
+
+.legend {
+  font-size: 14px;
+  color: white;
+}
+
+rect {
+  stroke-width: 2px;
+
+}
