@@ -118,12 +118,44 @@ div.sidebar{
    opacity: 0.5;
 }
 
-.legend {
-  font-size: 14px;
+#legend {
+  list-style: none;
+}
+#legend li {
+  float: left;
+  margin-right:10px;
   color: white;
+  font-size: 18px;
 }
 
-rect {
-  stroke-width: 2px;
+#legend span {
+  border: 1px solid #ccc;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+}
 
+#legend #IronMan {
+  background-color: #b20000;
+}
+
+#legend #CaptainAmerica {
+  background-color: #3232ff;
+}
+
+#legend #Hulk {
+  background-color: #4ca64c;
+}
+
+#legend #BlackWidow {
+  background-color: #ffb732;
+}
+
+#legend #Hawkeye {
+  background-color: #a64ca6;
+}
+
+#legend #Thor {
+  background-color: #ffff4c;
 }

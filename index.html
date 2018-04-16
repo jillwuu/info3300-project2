@@ -45,10 +45,20 @@
               <button class="movie-button" value='Avengers' onclick="toggle(this)">Avengers</button>
               <button class="movie-button" value='Civil War' onclick="toggle(this)">Civil War</button>
             </div>
+            <div id="legendContainer">
+                    <ul id="legend">
+                        <li><span id="IronMan"></span>Tony Stark/Iron man</li>
+                        <li><span id="CaptainAmerica"></span>Steve Rogers/Captain America</li>
+                        <li><span id="Hulk"></span>Bruce Banner/Hulk</li>
+                        <li><span id="BlackWidow"></span>Black Widow</li>
+                        <li><span id="Hawkeye"></span>Hawkeye</li>
+                        <li><span id="Thor"></span>Thor</li>
+                    </ul>
+                </div>
             <svg />
         </div>
 
-
+        
     <script>
         initialize();
         //inspiration: https://bl.ocks.org/mbostock/4062045
@@ -165,38 +175,6 @@
 
             var nodes = heroMap.nodes;
             var links = heroMap.links;
-            var color = d3.scaleOrdinal().domain(["Tony Stark/Iron Man", "Steve Rogers/Captain America", "Bruce Banner/Hulk", "Black Widow", "Hawkeye", "Thor"])
-                                .range(["#b20000", "#3232ff", "#4ca64c", "#ffb732", "#a64ca6", "#ffff4c"]);
-            var legendRectsize = 18;
-            var legendSpacing = 4;
-
-            var legend = svg.selectAll('.legend')
-                            .data(color.domain())
-                            .enter()
-                            .append('g')
-                            .attr('class', 'legend')
-                            .attr('transform', function(d, i) {
-                                // console.log(d);
-                                var height = legendRectsize + legendSpacing;
-                                var offset = height * color.domain().length / 10;
-                                var horz = -2;
-                                var vert = i * height - offset + 20;
-                                return 'translate(' + horz + ',' + vert + ')';
-                            });
-
-            legend.append('rect')
-                  .attr('width', legendRectsize)
-                  .attr('height', legendRectsize)
-                  .style('fill', color)
-                  .style('stroke', color);
-
-            legend.append('text')
-                  .attr('x', legendRectsize + legendSpacing)
-                  .attr('y', legendRectsize - legendSpacing)
-                  .attr("fill", "white")
-                  .text(function(d) {
-                      return d;
-                  });
 
             //simulation of nodes (similar to electrons w/ forces between the nodes)
             var simulation = d3.forceSimulation()
