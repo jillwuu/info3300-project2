@@ -39,6 +39,19 @@ div.tooltip {
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
+  color: black;
+}
+
+div.tooltipSidebar{
+  margin: auto;
+  position: absolute;
+  text-align: left;
+  font: 15px sans-serif;
+  font-family: Roboto;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  color: white;
 }
 
 
