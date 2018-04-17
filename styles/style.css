@@ -22,12 +22,21 @@ h2{
     font-size: 50px;
 }
 
+#directions {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin: 15px;
+}
+
 p{
     color: white;
     font-family:'Arsenal', sans-serif;
     font-size: 30px;
     margin: 10px;
 }
+
+
 
 div.tooltip {
   position: absolute;
@@ -115,6 +124,7 @@ div.sidebar{
    text-decoration: none;
    display: inline-block;
    font-size: 13px;
+   font-family: 'Roboto', sans-serif;
    opacity: 0.5;
 }
 
@@ -126,6 +136,7 @@ div.sidebar{
   margin-right:10px;
   color: white;
   font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #legend span {

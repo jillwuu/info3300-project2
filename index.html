@@ -37,6 +37,16 @@
 <body>
         <div id = "content">
             <h1>MARVEL™ Social Network</h1>
+            <div id='instructions'>
+                    <h2>Using the Visualization</h2>
+                    <p id='directions'>
+                        Below is an interactive visualization of the Marvel Universe - specifically, the movies. Hovering over the nodes of the network 
+                        will show you the hero's name. Double clicking on the node will prompt a side bar that gives you more information about the hero. 
+                        For instance, you can learn about their abilities, what movies they appear in, and even learn some trivia. An mini network for that 
+                        specific hero is included in the side bar as well. Hovering over the nodes will display the hero name. For fun, you can also click 
+                        and drag the nodes in the network. 
+                    </p>
+                </div>
             <div id = "buttons">
               <button class="movie-button" value='Iron Man' onclick="toggle(this)">Iron Man</button>
               <button class="movie-button" value='Captain America' onclick="toggle(this)">Captain America</button>
@@ -47,7 +57,7 @@
             </div>
             <div id="legendContainer">
                     <ul id="legend">
-                        <li><span id="IronMan"></span>Tony Stark/Iron man</li>
+                        <li><span id="IronMan"></span>Tony Stark/Iron Man</li>
                         <li><span id="CaptainAmerica"></span>Steve Rogers/Captain America</li>
                         <li><span id="Hulk"></span>Bruce Banner/Hulk</li>
                         <li><span id="BlackWidow"></span>Black Widow</li>
